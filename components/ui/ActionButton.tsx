@@ -13,26 +13,26 @@ interface ActionButtonProps {
 }
 
 const variantStyles = {
-  purple: 'bg-piku-purple-dark text-white hover:brightness-110 hover:shadow-lg',
-  cyan: 'bg-piku-cyan text-gray-900 hover:brightness-95 hover:shadow-lg',
-  mint: 'bg-piku-mint text-gray-900 hover:brightness-95 hover:shadow-lg',
-  yellow: 'bg-piku-yellow-light text-gray-900 hover:brightness-95 hover:shadow-lg',
-  orange: 'bg-piku-orange text-white hover:brightness-110 hover:shadow-lg',
-  gold: 'bg-piku-gold text-gray-900 hover:brightness-95 hover:shadow-lg',
-  gray: 'bg-gray-500 text-white hover:bg-gray-600 hover:shadow-lg',
-  red: 'bg-red-500 text-white hover:bg-red-600 hover:shadow-lg',
-  white: 'bg-white text-gray-900 hover:bg-gray-100 hover:shadow-lg',
+  purple: 'bg-purple-100 text-purple-800 hover:bg-purple-200 hover:shadow-sm',
+  cyan: 'bg-cyan-100 text-cyan-800 hover:bg-cyan-200 hover:shadow-sm',
+  mint: 'bg-emerald-100 text-emerald-800 hover:bg-emerald-200 hover:shadow-sm',
+  yellow: 'bg-amber-100 text-amber-800 hover:bg-amber-200 hover:shadow-sm',
+  orange: 'bg-orange-100 text-orange-800 hover:bg-orange-200 hover:shadow-sm',
+  gold: 'bg-yellow-100 text-yellow-800 hover:bg-yellow-200 hover:shadow-sm',
+  gray: 'bg-gray-200 text-gray-700 hover:bg-gray-300 hover:shadow-sm',
+  red: 'bg-red-100 text-red-700 hover:bg-red-200 hover:shadow-sm',
+  white: 'bg-white text-gray-900 hover:bg-gray-100 hover:shadow-sm',
 };
 
 const iconBgStyles = {
-  purple: 'bg-white/20 group-hover:bg-white/30',
-  cyan: 'bg-white/30 group-hover:bg-white/40',
-  mint: 'bg-white/30 group-hover:bg-white/40',
-  yellow: 'bg-white/30 group-hover:bg-white/40',
-  orange: 'bg-white/20 group-hover:bg-white/30',
-  gold: 'bg-white/30 group-hover:bg-white/40',
-  gray: 'bg-white/20 group-hover:bg-white/30',
-  red: 'bg-white/20 group-hover:bg-white/30',
+  purple: 'bg-purple-200/60 group-hover:bg-purple-300/60',
+  cyan: 'bg-cyan-200/60 group-hover:bg-cyan-300/60',
+  mint: 'bg-emerald-200/60 group-hover:bg-emerald-300/60',
+  yellow: 'bg-amber-200/60 group-hover:bg-amber-300/60',
+  orange: 'bg-orange-200/60 group-hover:bg-orange-300/60',
+  gold: 'bg-yellow-200/60 group-hover:bg-yellow-300/60',
+  gray: 'bg-gray-300/60 group-hover:bg-gray-400/40',
+  red: 'bg-red-200/60 group-hover:bg-red-300/60',
   white: 'bg-gray-100 group-hover:bg-gray-200',
 };
 

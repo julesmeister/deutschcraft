@@ -222,7 +222,16 @@ export async function setCurrentMaterial(
     currentMaterialTitle: materialTitle || null,
     currentMaterialUrl: materialUrl || null,
     currentMaterialType: materialType || null,
+    currentMaterialPage: 1,
   });
+}
+
+export async function setCurrentMaterialPage(
+  roomId: string,
+  page: number
+): Promise<void> {
+  const roomRef = doc(db, COLLECTIONS.ROOMS, roomId);
+  await updateDoc(roomRef, { currentMaterialPage: page });
 }
 
 export async function setCurrentExercise(

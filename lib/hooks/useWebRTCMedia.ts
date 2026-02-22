@@ -43,6 +43,7 @@ export function useWebRTCMedia({
   const localVideoStreamRef = useRef<MediaStream | null>(null);
   const peerConnectionsRef = useRef<Map<string, PeerConnection>>(new Map());
   const audioContextRef = useRef<AudioContext | null>(null);
+  const localAnalyserRef = useRef<{ analyser: AnalyserNode; source: MediaStreamAudioSourceNode } | null>(null);
   const socketRef = useRef<SignalingSocket | null>(null);
   const isMediaActiveRef = useRef<boolean>(false);
   const previousRoomIdRef = useRef<string | null>(null);
@@ -319,6 +320,50 @@ export function useWebRTCMedia({
     setIsVideoActive,
     onError,
   });
+
+  // Create a local analyser so the current user sees their own audio waves
+  useEffect(() => {
+    if (!isVoiceActive || !userId) return;
+    let cancelled = false;
+
+    // Poll until local audio stream and AudioContext are ready
+    const tryCreate = () => {
+      if (cancelled) return;
+      const stream = localAudioStreamRef.current;
+      const ctx = audioContextRef.current;
+      if (!stream || !ctx || stream.getAudioTracks().length === 0) {
+        // Retry in 100ms
+        setTimeout(tryCreate, 100);
+        return;
+      }
+
+      try {
+        const source = ctx.createMediaStreamSource(stream);
+        const analyser = ctx.createAnalyser();
+        analyser.fftSize = 512;
+        analyser.smoothingTimeConstant = 0.8;
+        source.connect(analyser);
+        // Don't connect to destination — we don't want to hear ourselves
+
+        localAnalyserRef.current = { analyser, source };
+        setAudioAnalysers(prev => { const m = new Map(prev); m.set(userId, analyser); return m; });
+        console.log('[MEDIA] Local analyser created for', userId);
+      } catch (e) {
+        console.error('[MEDIA] Failed to create local analyser:', e);
+      }
+    };
+
+    tryCreate();
+
+    return () => {
+      cancelled = true;
+      if (localAnalyserRef.current) {
+        try { localAnalyserRef.current.source.disconnect(); } catch {}
+        localAnalyserRef.current = null;
+      }
+      setAudioAnalysers(prev => { const m = new Map(prev); m.delete(userId); return m; });
+    };
+  }, [isVoiceActive, userId]);
 
   // Cleanup on unmount
   useEffect(() => {

@@ -154,9 +154,9 @@ export function WritingBoard({
   const canEdit = isOwnWriting || currentUserRole === 'teacher';
 
   return (
-    <div className="bg-white min-h-[600px] flex flex-col relative">
+    <div className="bg-white rounded-3xl min-h-[600px] flex flex-col relative overflow-hidden">
       {/* Top Header with Tabs */}
-      <div className="border-b border-gray-200">
+      <div className="border-b border-gray-200/60">
         <WritingBoardHeader
           wordCount={wordCount}
           currentUserRole={currentUserRole}

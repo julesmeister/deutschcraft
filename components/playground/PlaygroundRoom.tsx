@@ -1,24 +1,24 @@
 /**
  * PlaygroundRoom Component
- * Active room view with voice chat and writing board
+ * Active room view with flexible resizable/draggable panel layout
  */
 
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
 import { AlertDialog } from "@/components/ui/Dialog";
-import { VideoPanel, type VideoLayout } from "@/components/playground/VideoPanel";
-import { HorizontalVideoStrip } from "@/components/playground/HorizontalVideoStrip";
-import { ParticipantsList } from "@/components/playground/ParticipantsList";
-import { ClassroomTools } from "@/components/playground/ClassroomTools";
 import { FloatingRedemittelWidget } from "@/components/writing/FloatingRedemittelWidget";
 import { MaterialSelector } from "@/components/playground/MaterialSelector";
 import { ExerciseSelector } from "@/components/playground/ExerciseSelector";
-import { PlaygroundRoomHeaderActions } from "@/components/playground/PlaygroundRoomHeaderActions";
-import { PlaygroundRoomContent } from "@/components/playground/PlaygroundRoomContent";
+import { FloatingPlaygroundControls } from "@/components/playground/FloatingPlaygroundControls";
 import { useAudioController } from "@/components/playground/useAudioController";
+import { PlaygroundWidgetProvider, type WidgetContextValue } from "./layout/PlaygroundWidgetContext";
+import { ResizablePanelLayout } from "./layout/ResizablePanelLayout";
+import { usePlaygroundLayout } from "./layout/usePlaygroundLayout";
+import { setCurrentMaterialPage } from "@/lib/services/playground/rooms";
 import { formatDuration } from "@/lib/utils/dateHelpers";
+import type { VideoLayout } from "@/components/playground/VideoPanel";
 import type { GroupIsolationState } from "@/components/playground/audioTypes";
 import type {
   PlaygroundRoom as PlaygroundRoomType,
@@ -119,11 +119,11 @@ export function PlaygroundRoom({
   const [formattedDate, setFormattedDate] = useState<string>("");
   const [isMaterialSelectorOpen, setIsMaterialSelectorOpen] = useState(false);
   const [isExerciseSelectorOpen, setIsExerciseSelectorOpen] = useState(false);
-  // null = CSS-responsive default (hidden on mobile, visible on xl+)
-  // true = explicitly shown, false = explicitly hidden
-  const [sidebarState, setSidebarState] = useState<boolean | null>(null);
 
-  // Centralized audio control: isolation state + volume management
+  // Flexible layout state
+  const { layout, moveWidget, toggleLeftPanel, setPanelSizes, setColumnCount, resetLayout } = usePlaygroundLayout();
+
+  // Centralized audio control
   const [isolation, setIsolation] = useState<GroupIsolationState>({
     isIsolated: false,
     mutedUserIds: new Set(),
@@ -132,7 +132,6 @@ export function PlaygroundRoom({
   const audioControl = useAudioController(audioElements, isolation);
   const handleIsolationChange = useCallback((state: GroupIsolationState) => {
     setIsolation(prev => {
-      // Bail out if nothing materially changed to prevent re-render loops
       if (
         prev.isIsolated === state.isIsolated &&
         prev.myGroupIndex === state.myGroupIndex &&
@@ -160,14 +159,9 @@ export function PlaygroundRoom({
   }, [currentRoom?.createdAt]);
 
   const handleSelectMaterial = async (
-    materialId: string,
-    materialTitle: string,
-    materialUrl: string,
-    materialType: "pdf" | "audio"
+    materialId: string, materialTitle: string, materialUrl: string, materialType: "pdf" | "audio"
   ) => {
-    if (onSetCurrentMaterial) {
-      await onSetCurrentMaterial(materialId, materialTitle, materialUrl, materialType);
-    }
+    if (onSetCurrentMaterial) await onSetCurrentMaterial(materialId, materialTitle, materialUrl, materialType);
   };
 
   const handleCloseMaterial = async () => {
@@ -175,20 +169,42 @@ export function PlaygroundRoom({
   };
 
   const handleSelectExercise = async (
-    exerciseId: string,
-    exerciseNumber: string,
-    level: string,
-    lessonNumber: number,
-    bookType: "AB" | "KB"
+    exerciseId: string, exerciseNumber: string, level: string, lessonNumber: number, bookType: "AB" | "KB"
   ) => {
-    if (onSetCurrentExercise) {
-      await onSetCurrentExercise(exerciseId, exerciseNumber, level, lessonNumber, bookType);
-    }
+    if (onSetCurrentExercise) await onSetCurrentExercise(exerciseId, exerciseNumber, level, lessonNumber, bookType);
   };
 
   const handleCloseExercise = async () => {
     if (onSetCurrentExercise) await onSetCurrentExercise(null, null, null, null, null);
   };
+
+  const handleSetMaterialPage = useCallback(async (page: number) => {
+    if (!currentRoom?.roomId) return;
+    await setCurrentMaterialPage(currentRoom.roomId, page);
+  }, [currentRoom?.roomId]);
+
+  // Build widget context value
+  const widgetCtx: WidgetContextValue = useMemo(() => ({
+    currentRoom, participants, writings, myWriting,
+    userId, userName, userRole,
+    isVoiceActive, isVideoActive, isMuted, localStream,
+    mediaParticipants, audioStreams, videoStreams, audioAnalysers, audioControl,
+    videoLayout, onSetVideoLayout: setVideoLayout,
+    onStartVoice, onStartVideo, onStopVoice, onToggleMute, onToggleVideo,
+    onSaveWriting, onToggleWritingVisibility, onToggleRoomPublicWriting,
+    onCloseMaterial: onSetCurrentMaterial ? handleCloseMaterial : undefined,
+    onCloseExercise: onSetCurrentExercise ? handleCloseExercise : undefined,
+    onSetMaterialPage: userRole === "teacher" ? handleSetMaterialPage : undefined,
+    onIsolationChange: handleIsolationChange,
+  }), [
+    currentRoom, participants, writings, myWriting,
+    userId, userName, userRole,
+    isVoiceActive, isVideoActive, isMuted, localStream,
+    mediaParticipants, audioStreams, videoStreams, audioAnalysers, audioControl,
+    videoLayout, onStartVoice, onStartVideo, onStopVoice, onToggleMute, onToggleVideo,
+    onSaveWriting, onToggleWritingVisibility, onToggleRoomPublicWriting,
+    onSetCurrentMaterial, onSetCurrentExercise, handleSetMaterialPage, handleIsolationChange,
+  ]);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -199,131 +215,16 @@ export function PlaygroundRoom({
         } • Host: ${currentRoom.hostName} • ${duration}`}
         backButton={{ label: "Leave Room", onClick: onLeaveRoom }}
         onTitleEdit={isHost ? onUpdateRoomTitle : undefined}
-        actions={
-          <PlaygroundRoomHeaderActions
-            userRole={userRole}
-            isHost={isHost}
-            onOpenExerciseSelector={onSetCurrentExercise ? () => setIsExerciseSelectorOpen(true) : undefined}
-            onOpenMaterialSelector={onSetCurrentMaterial ? () => setIsMaterialSelectorOpen(true) : undefined}
-            onMinimize={onMinimize}
-            onEndRoom={onEndRoom}
-          />
-        }
       />
 
-      <div className="container mx-auto px-6 py-8">
-        <div className={`grid gap-6 ${
-          sidebarState === true ? "grid-cols-3" :
-          sidebarState === false ? "grid-cols-1" :
-          "grid-cols-1 xl:grid-cols-3"
-        }`}>
-          {/* Left: Video Panel — always visible on xl, collapsible below */}
-          <div className={`col-span-1 ${
-            sidebarState === true ? "" :
-            sidebarState === false ? "hidden" :
-            "hidden xl:block"
-          }`}>
-            {isVoiceActive && videoLayout === "top-left" && (
-              <div className="mb-4">
-                <HorizontalVideoStrip
-                  isVideoActive={isVideoActive}
-                  localStream={localStream}
-                  participants={mediaParticipants}
-                  videoStreams={videoStreams}
-                  currentUserId={userId}
-                  currentUserName={userName}
-                  isMuted={isMuted}
-                />
-              </div>
-            )}
-            <VideoPanel
-              isVoiceActive={isVoiceActive}
-              isVideoActive={isVideoActive}
-              isMuted={isMuted}
-              localStream={localStream}
-              participants={mediaParticipants}
-              videoStreams={videoStreams}
-              audioStreams={audioStreams}
-              audioAnalysers={audioAnalysers}
-              audioControl={audioControl}
-              currentUserId={userId}
-              currentUserName={userName}
-              hostId={currentRoom.hostId}
-              layout={videoLayout}
-              onStartVoice={onStartVoice}
-              onStartVideo={onStartVideo}
-              onStopVoice={onStopVoice}
-              onToggleMute={onToggleMute}
-              onToggleVideo={onToggleVideo}
-              onLayoutChange={setVideoLayout}
-            />
-            <div className="mt-6 bg-white border border-gray-200 p-4">
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="text-lg font-semibold text-neutral-900">
-                  Participants
-                </h3>
-                <span className="inline-flex items-center justify-center min-w-[1.5rem] h-6 px-1.5 rounded-md bg-pastel-ocean/15 text-pastel-ocean text-xs font-bold">
-                  {participants.length}
-                </span>
-              </div>
-              <ParticipantsList
-                participants={participants}
-                audioStreams={audioStreams}
-                audioAnalysers={audioAnalysers}
-                audioControl={audioControl}
-                userRole={userRole}
-                userId={userId}
-              />
-            </div>
-            <div className="mt-6 bg-white border border-gray-200 p-4">
-              <ClassroomTools participants={participants} audioControl={audioControl} currentUserId={userId} userRole={userRole} roomId={currentRoom.roomId} onIsolationChange={handleIsolationChange} />
-            </div>
-          </div>
-
-          {/* Right: Content Panel */}
-          <div className={`${
-            sidebarState === true ? "col-span-2" :
-            sidebarState === false ? "" :
-            "xl:col-span-2"
-          } space-y-6`}>
-            {isVoiceActive && videoLayout === "top-right" && (
-              <div className="mb-4">
-                <HorizontalVideoStrip
-                  isVideoActive={isVideoActive}
-                  localStream={localStream}
-                  participants={mediaParticipants}
-                  videoStreams={videoStreams}
-                  currentUserId={userId}
-                  currentUserName={userName}
-                  isMuted={isMuted}
-                />
-              </div>
-            )}
-            <PlaygroundRoomContent
-              currentRoom={currentRoom}
-              writings={writings}
-              myWriting={myWriting}
-              userId={userId}
-              userRole={userRole}
-              participantCount={participants.length}
-              isSidebarOpen={sidebarState}
-              onToggleSidebar={() => {
-                if (sidebarState === null) {
-                  // First toggle: on xl+ panel is visible so hide it, on mobile it's hidden so show it
-                  const isXl = window.matchMedia("(min-width: 1280px)").matches;
-                  setSidebarState(isXl ? false : true);
-                } else {
-                  setSidebarState(null); // Reset to CSS-responsive default
-                }
-              }}
-              onSaveWriting={onSaveWriting}
-              onToggleWritingVisibility={onToggleWritingVisibility}
-              onToggleRoomPublicWriting={onToggleRoomPublicWriting}
-              onCloseMaterial={handleCloseMaterial}
-              onCloseExercise={handleCloseExercise}
-            />
-          </div>
-        </div>
+      <div className={layout.columnCount === 3 ? "w-full px-4 py-6" : "container mx-auto px-4 sm:px-6 py-6"}>
+        <PlaygroundWidgetProvider value={widgetCtx}>
+          <ResizablePanelLayout
+            layout={layout}
+            onMoveWidget={moveWidget}
+            onPanelResize={setPanelSizes}
+          />
+        </PlaygroundWidgetProvider>
       </div>
 
       <AlertDialog
@@ -331,6 +232,20 @@ export function PlaygroundRoom({
         onClose={onCloseDialog}
         title={dialogState.title}
         message={dialogState.message}
+      />
+
+      <FloatingPlaygroundControls
+        userRole={userRole}
+        isHost={isHost}
+        isLeftPanelVisible={layout.isLeftPanelVisible}
+        columnCount={layout.columnCount}
+        onToggleLeftPanel={toggleLeftPanel}
+        onSetColumnCount={setColumnCount}
+        onResetLayout={resetLayout}
+        onOpenExerciseSelector={onSetCurrentExercise ? () => setIsExerciseSelectorOpen(true) : undefined}
+        onOpenMaterialSelector={onSetCurrentMaterial ? () => setIsMaterialSelectorOpen(true) : undefined}
+        onMinimize={onMinimize}
+        onEndRoom={onEndRoom}
       />
 
       <FloatingRedemittelWidget />

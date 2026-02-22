@@ -181,14 +181,14 @@ export function ActivityTimer({ toolState }: ActivityTimerProps) {
   return (
     <div className="space-y-3">
       {/* Mode toggle */}
-      <div className="flex gap-1">
+      <div className="flex gap-1.5 bg-gray-100/80 rounded-full p-0.5">
         <button
           onClick={() => switchMode("countdown")}
           disabled={!isTeacher}
-          className={`flex-1 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
+          className={`flex-1 py-1.5 rounded-full text-xs font-semibold transition-all ${
             timer.mode === "countdown"
-              ? "bg-pastel-ocean text-white"
-              : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+              ? "bg-teal-500 text-white shadow-sm"
+              : "text-gray-500 hover:text-gray-700"
           }`}
         >
           Countdown
@@ -196,10 +196,10 @@ export function ActivityTimer({ toolState }: ActivityTimerProps) {
         <button
           onClick={() => switchMode("stopwatch")}
           disabled={!isTeacher}
-          className={`flex-1 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
+          className={`flex-1 py-1.5 rounded-full text-xs font-semibold transition-all ${
             timer.mode === "stopwatch"
-              ? "bg-pastel-ocean text-white"
-              : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+              ? "bg-teal-500 text-white shadow-sm"
+              : "text-gray-500 hover:text-gray-700"
           }`}
         >
           Stopwatch
@@ -213,10 +213,10 @@ export function ActivityTimer({ toolState }: ActivityTimerProps) {
             <button
               key={p.seconds}
               onClick={() => selectPreset(p.seconds)}
-              className={`px-2.5 py-1 rounded-md text-xs font-medium transition-colors ${
+              className={`px-3 py-1 rounded-full text-xs font-medium transition-all ${
                 timer.totalSeconds === p.seconds
-                  ? "bg-pastel-ocean text-white"
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                  ? "bg-teal-100 text-teal-800 shadow-sm"
+                  : "bg-gray-100/80 text-gray-500 hover:bg-gray-200/80"
               }`}
             >
               {p.label}
@@ -273,14 +273,14 @@ export function ActivityTimer({ toolState }: ActivityTimerProps) {
           {!isRunning && !timer.isFinished ? (
             <button
               onClick={start}
-              className="flex-1 py-2 rounded-lg bg-green-500 text-white font-semibold text-sm hover:bg-green-600 transition-colors"
+              className="flex-1 py-2.5 rounded-full bg-green-500 text-white font-semibold text-sm hover:bg-green-600 transition-colors"
             >
               Start
             </button>
           ) : isRunning ? (
             <button
               onClick={pause}
-              className="flex-1 py-2 rounded-lg bg-amber-500 text-white font-semibold text-sm hover:bg-amber-600 transition-colors"
+              className="flex-1 py-2.5 rounded-full bg-amber-500 text-white font-semibold text-sm hover:bg-amber-600 transition-colors"
             >
               Pause
             </button>
@@ -288,7 +288,7 @@ export function ActivityTimer({ toolState }: ActivityTimerProps) {
           {(isRunning || timer.isFinished || timer.pausedRemaining !== null) && (
             <button
               onClick={reset}
-              className="flex-1 py-2 rounded-lg bg-gray-200 text-gray-700 font-semibold text-sm hover:bg-gray-300 transition-colors"
+              className="flex-1 py-2.5 rounded-full bg-gray-200 text-gray-700 font-semibold text-sm hover:bg-gray-300 transition-colors"
             >
               Reset
             </button>

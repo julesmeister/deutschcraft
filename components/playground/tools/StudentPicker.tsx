@@ -79,13 +79,13 @@ export function StudentPicker({ participants, toolState }: StudentPickerProps) {
       {/* Current pick display */}
       {current && (
         <div
-          className={`text-center py-4 rounded-lg border-2 transition-all ${
+          className={`text-center py-4 rounded-2xl transition-all ${
             isAnimating
-              ? "border-gray-200 bg-gray-50"
-              : "border-pastel-ocean bg-blue-50"
+              ? "bg-gray-100/80"
+              : "bg-rose-50"
           }`}
         >
-          <p className={`text-lg font-bold ${isAnimating ? "text-gray-400" : "text-pastel-ocean"}`}>
+          <p className={`text-lg font-bold ${isAnimating ? "text-gray-400" : "text-rose-700"}`}>
             {current.userName}
           </p>
         </div>
@@ -96,7 +96,7 @@ export function StudentPicker({ participants, toolState }: StudentPickerProps) {
         <button
           onClick={pick}
           disabled={allPicked || isAnimating}
-          className="w-full py-2 rounded-lg bg-pastel-ocean text-white font-semibold text-sm hover:opacity-90 disabled:opacity-60 transition-opacity"
+          className="w-full py-2.5 rounded-full bg-rose-500 text-white font-semibold text-sm hover:bg-rose-600 disabled:opacity-60 transition-colors"
         >
           {isAnimating ? "Picking..." : allPicked ? "All Picked!" : "Pick a Student"}
         </button>
@@ -110,7 +110,7 @@ export function StudentPicker({ participants, toolState }: StudentPickerProps) {
             {picked.map((p, i) => (
               <span
                 key={p.userId}
-                className="text-xs bg-gray-100 rounded px-2 py-0.5 text-gray-500"
+                className="text-xs bg-gray-100/80 rounded-full px-2.5 py-0.5 text-gray-500"
               >
                 {i + 1}. {p.userName}
               </span>

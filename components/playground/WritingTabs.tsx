@@ -31,7 +31,7 @@ export function WritingTabs({
   const isTeacher = currentUserRole === 'teacher';
 
   return (
-    <div className="flex border-t border-gray-200 bg-white">
+    <div className="flex border-t border-gray-200/60 bg-transparent">
       {isTeacher ? (
         <>
           {/* Teacher view: My Writing first (left) */}

@@ -157,10 +157,10 @@ export function GroupRandomizer({
               key={n}
               onClick={() => { if (!isTeacher) return; setGroupCount(n); clearGroups(); }}
               disabled={!isTeacher}
-              className={`w-8 h-8 rounded-lg text-sm font-semibold transition-colors ${
+              className={`w-8 h-8 rounded-full text-sm font-semibold transition-all ${
                 groupCount === n
-                  ? "bg-pastel-ocean text-white"
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                  ? "bg-blue-100 text-blue-800 shadow-sm"
+                  : "bg-gray-100/80 text-gray-500 hover:bg-gray-200/80"
               }`}
             >
               {n}
@@ -192,7 +192,7 @@ export function GroupRandomizer({
       {isTeacher && (
         <button
           onClick={shuffle}
-          className="w-full py-2 rounded-lg bg-pastel-ocean text-white font-semibold text-sm hover:opacity-90 transition-opacity"
+          className="w-full py-2.5 rounded-full bg-blue-500 text-white font-semibold text-sm hover:bg-blue-600 transition-colors"
         >
           {groups.length > 0 ? "Re-shuffle" : "Shuffle"}
         </button>

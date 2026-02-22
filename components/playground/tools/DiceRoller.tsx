@@ -107,7 +107,7 @@ export function DiceRoller({ toolState }: DiceRollerProps) {
         <button
           onClick={roll}
           disabled={isRolling}
-          className="w-full py-2 rounded-lg bg-pastel-ocean text-white font-semibold text-sm hover:opacity-90 disabled:opacity-60 transition-opacity"
+          className="w-full py-2.5 rounded-full bg-amber-500 text-white font-semibold text-sm hover:bg-amber-600 disabled:opacity-60 transition-colors"
         >
           {isRolling ? "Rolling..." : "Roll"}
         </button>

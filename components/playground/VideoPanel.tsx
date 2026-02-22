@@ -77,14 +77,14 @@ export function VideoPanel({
   };
 
   return (
-    <div className="bg-white border border-gray-200 p-4 space-y-4">
+    <div className="bg-white rounded-3xl p-5 space-y-4">
       {/* Controls */}
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-semibold text-neutral-900">
           Voice & Video
         </h3>
         {participants.length > 0 && (
-          <span className="inline-flex items-center justify-center min-w-[1.5rem] h-6 px-1.5 rounded-md bg-pastel-ocean/15 text-pastel-ocean text-xs font-bold">
+          <span className="inline-flex items-center justify-center min-w-[1.5rem] h-6 px-2 rounded-full bg-pastel-ocean/15 text-pastel-ocean text-xs font-bold">
             {participants.length + 1}
           </span>
         )}

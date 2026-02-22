@@ -18,6 +18,7 @@ export interface PlaygroundRoom {
   currentMaterialTitle?: string;
   currentMaterialUrl?: string;
   currentMaterialType?: 'pdf' | 'audio'; // Type of material currently displayed
+  currentMaterialPage?: number; // Synced PDF page (teacher controls)
   currentExerciseId?: string; // Exercise being displayed in the room
   currentExerciseNumber?: string; // Exercise number for display
   currentExerciseLevel?: string; // Level (B1, A2, etc.)

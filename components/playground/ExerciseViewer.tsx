@@ -68,7 +68,7 @@ export function ExerciseViewer({
 
   if (isLoading) {
     return (
-      <div className="bg-white border border-gray-200 rounded-lg p-6">
+      <div className="bg-white rounded-3xl p-6">
         <div className="flex items-center justify-center py-8">
           <div className="animate-spin rounded-full h-8 w-8 border-2 border-blue-500 border-t-transparent" />
           <span className="ml-3 text-gray-500">Loading exercise...</span>
@@ -79,7 +79,7 @@ export function ExerciseViewer({
 
   if (error || !exercise) {
     return (
-      <div className="bg-white border border-gray-200 rounded-lg p-6">
+      <div className="bg-white rounded-3xl p-6">
         <div className="text-center py-8">
           <div className="text-4xl mb-3">⚠️</div>
           <p className="text-gray-600">
@@ -102,9 +102,9 @@ export function ExerciseViewer({
     : difficultyColors.medium;
 
   return (
-    <div className="bg-white border border-gray-200 overflow-hidden">
+    <div className="bg-white rounded-3xl overflow-hidden">
       {/* Header */}
-      <div className="p-4 border-b border-gray-100 bg-gradient-to-r from-purple-50 to-blue-50">
+      <div className="p-4 border-b border-gray-100/60 bg-gradient-to-r from-purple-50/80 to-blue-50/80 rounded-t-3xl">
         <div className="flex items-start justify-between">
           <div className="flex-1">
             <div className="flex items-center gap-2 mb-2">

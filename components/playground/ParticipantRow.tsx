@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useMemo } from "react";
 
 interface ParticipantWithAudio {
   participantId: string;
@@ -22,6 +22,32 @@ interface ParticipantRowProps {
   isIsolated?: boolean;
   onMute: (participantId: string, currentIsMuted: boolean) => void;
   onDragStart: (userId: string, clientX: number) => void;
+}
+
+/** Animated audio wave bars — heights driven by audioLevel */
+function AudioWave({ audioLevel, isMuted }: { audioLevel: number; isMuted: boolean }) {
+  // Generate 4 bar heights from the audio level with slight variation per bar
+  const bars = useMemo(() => [0.6, 1.0, 0.75, 0.9], []);
+
+  if (isMuted) return null;
+
+  // Scale from 0–1 audioLevel to a min 20% / max 100% height
+  const scale = Math.min(1, Math.max(0.15, audioLevel * 8));
+
+  return (
+    <div className="relative z-10 flex items-center gap-[2px] h-4 mr-0.5">
+      {bars.map((weight, i) => (
+        <div
+          key={i}
+          className="w-[3px] rounded-full bg-green-500 transition-all duration-75"
+          style={{
+            height: `${Math.max(3, scale * weight * 16)}px`,
+            opacity: 0.6 + scale * 0.4,
+          }}
+        />
+      ))}
+    </div>
+  );
 }
 
 export function ParticipantRow({
@@ -76,7 +102,7 @@ export function ParticipantRow({
         />
       )}
 
-      {/* Audio level visualization */}
+      {/* Audio level visualization (background) */}
       {p.isVoiceActive && effectiveTalking && (
         <div
           className="absolute left-0 top-0 h-full bg-green-400 transition-all duration-100 pointer-events-none"
@@ -144,16 +170,21 @@ export function ParticipantRow({
       </button>
 
       {/* Name and role */}
-      <div className="relative z-10 flex-1 min-w-0">
-        <span className={`text-xs font-semibold ${effectiveTalking ? "text-green-900" : "text-neutral-800"}`}>
+      <div className="relative z-10 flex-1 min-w-0 flex items-center">
+        <span className={`text-xs font-semibold leading-none ${effectiveTalking ? "text-green-900" : "text-neutral-800"}`}>
           {p.userName}
         </span>
         {!effectiveTalking && !p.isVoiceActive && (
-          <span className="ml-1.5 text-[10px] text-gray-500 uppercase tracking-wide">
+          <span className="ml-1.5 text-[10px] leading-none text-gray-500 uppercase tracking-wide">
             {p.role}
           </span>
         )}
       </div>
+
+      {/* Audio wave bars — shown when talking */}
+      {effectiveTalking && p.isVoiceActive && (
+        <AudioWave audioLevel={p.audioLevel} isMuted={p.isMuted} />
+      )}
 
       {/* Volume percentage (shown while dragging) */}
       {isDragging && !isIsolated && (

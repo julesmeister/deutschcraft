@@ -79,14 +79,14 @@ export function Scoreboard({ participants, toolState }: ScoreboardProps) {
   return (
     <div className="space-y-3">
       {/* Mode toggle */}
-      <div className="flex gap-1">
+      <div className="flex gap-1.5 bg-gray-100/80 rounded-full p-0.5">
         <button
           onClick={() => isTeacher && setMode("individual")}
           disabled={!isTeacher}
-          className={`flex-1 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
+          className={`flex-1 py-1.5 rounded-full text-xs font-semibold transition-all ${
             mode === "individual"
-              ? "bg-pastel-ocean text-white"
-              : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+              ? "bg-purple-500 text-white shadow-sm"
+              : "text-gray-500 hover:text-gray-700"
           }`}
         >
           Individual
@@ -94,10 +94,10 @@ export function Scoreboard({ participants, toolState }: ScoreboardProps) {
         <button
           onClick={() => isTeacher && setMode("teams")}
           disabled={!isTeacher}
-          className={`flex-1 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
+          className={`flex-1 py-1.5 rounded-full text-xs font-semibold transition-all ${
             mode === "teams"
-              ? "bg-pastel-ocean text-white"
-              : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+              ? "bg-purple-500 text-white shadow-sm"
+              : "text-gray-500 hover:text-gray-700"
           }`}
         >
           Teams
@@ -117,7 +117,7 @@ export function Scoreboard({ participants, toolState }: ScoreboardProps) {
                 return (
                   <div
                     key={p.userId}
-                    className="flex items-center gap-2 bg-gray-50 rounded-lg px-3 py-2"
+                    className="flex items-center gap-2 bg-gray-50/80 rounded-2xl px-3 py-2"
                   >
                     <span className={`text-xs font-bold w-5 text-center ${
                       rank === 0 && pts > 0 ? "text-amber-500" : "text-gray-400"
@@ -134,13 +134,13 @@ export function Scoreboard({ participants, toolState }: ScoreboardProps) {
                       <div className="flex gap-0.5 ml-1">
                         <button
                           onClick={() => addPoints(p.userId, -1)}
-                          className="w-6 h-6 rounded bg-red-100 text-red-600 text-xs font-bold hover:bg-red-200 transition-colors"
+                          className="w-6 h-6 rounded-full bg-red-100 text-red-600 text-xs font-bold hover:bg-red-200 transition-colors"
                         >
                           -
                         </button>
                         <button
                           onClick={() => addPoints(p.userId, 1)}
-                          className="w-6 h-6 rounded bg-green-100 text-green-600 text-xs font-bold hover:bg-green-200 transition-colors"
+                          className="w-6 h-6 rounded-full bg-green-100 text-green-600 text-xs font-bold hover:bg-green-200 transition-colors"
                         >
                           +
                         </button>
@@ -154,7 +154,7 @@ export function Scoreboard({ participants, toolState }: ScoreboardProps) {
           {sortedParticipants.length > 0 && isTeacher && (
             <button
               onClick={resetScores}
-              className="w-full py-1.5 rounded-lg bg-gray-100 text-gray-500 text-xs font-medium hover:bg-gray-200 transition-colors"
+              className="w-full py-1.5 rounded-full bg-gray-100/80 text-gray-500 text-xs font-medium hover:bg-gray-200/80 transition-colors"
             >
               Reset All Scores
             </button>
@@ -171,10 +171,10 @@ export function Scoreboard({ participants, toolState }: ScoreboardProps) {
                   <button
                     key={n}
                     onClick={() => updateTeamCount(n)}
-                    className={`w-7 h-7 rounded-lg text-xs font-semibold transition-colors ${
+                    className={`w-7 h-7 rounded-full text-xs font-semibold transition-all ${
                       teamCount === n
-                        ? "bg-pastel-ocean text-white"
-                        : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                        ? "bg-purple-100 text-purple-800 shadow-sm"
+                        : "bg-gray-100/80 text-gray-500 hover:bg-gray-200/80"
                     }`}
                   >
                     {n}
@@ -189,7 +189,7 @@ export function Scoreboard({ participants, toolState }: ScoreboardProps) {
             {teams.map((team, i) => (
               <div
                 key={i}
-                className={`${team.color} rounded-lg px-3 py-3 flex items-center gap-2`}
+                className={`${team.color} rounded-2xl px-3 py-3 flex items-center gap-2`}
               >
                 <span className="flex-1 text-sm font-semibold">{team.name}</span>
                 <span className="text-2xl font-bold w-12 text-center">{team.score}</span>
@@ -197,13 +197,13 @@ export function Scoreboard({ participants, toolState }: ScoreboardProps) {
                   <div className="flex flex-col gap-0.5">
                     <button
                       onClick={() => addTeamPoints(i, 1)}
-                      className="w-7 h-7 rounded bg-white/50 text-xs font-bold hover:bg-white/80 transition-colors"
+                      className="w-7 h-7 rounded-full bg-white/50 text-xs font-bold hover:bg-white/80 transition-colors"
                     >
                       +
                     </button>
                     <button
                       onClick={() => addTeamPoints(i, -1)}
-                      className="w-7 h-7 rounded bg-white/50 text-xs font-bold hover:bg-white/80 transition-colors"
+                      className="w-7 h-7 rounded-full bg-white/50 text-xs font-bold hover:bg-white/80 transition-colors"
                     >
                       -
                     </button>
@@ -216,7 +216,7 @@ export function Scoreboard({ participants, toolState }: ScoreboardProps) {
           {isTeacher && (
             <button
               onClick={resetTeams}
-              className="w-full py-1.5 rounded-lg bg-gray-100 text-gray-500 text-xs font-medium hover:bg-gray-200 transition-colors"
+              className="w-full py-1.5 rounded-full bg-gray-100/80 text-gray-500 text-xs font-medium hover:bg-gray-200/80 transition-colors"
             >
               Reset All Scores
             </button>

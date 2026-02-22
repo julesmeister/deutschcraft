@@ -4,12 +4,12 @@ import { useState } from "react";
 import type { PlaygroundParticipant } from "@/lib/models/playground";
 
 const GROUP_COLORS = [
-  { bg: "bg-blue-50", border: "border-blue-200", label: "text-blue-700" },
-  { bg: "bg-green-50", border: "border-green-200", label: "text-green-700" },
-  { bg: "bg-amber-50", border: "border-amber-200", label: "text-amber-700" },
-  { bg: "bg-purple-50", border: "border-purple-200", label: "text-purple-700" },
-  { bg: "bg-rose-50", border: "border-rose-200", label: "text-rose-700" },
-  { bg: "bg-cyan-50", border: "border-cyan-200", label: "text-cyan-700" },
+  { bg: "bg-blue-50", label: "text-blue-700" },
+  { bg: "bg-green-50", label: "text-green-700" },
+  { bg: "bg-amber-50", label: "text-amber-700" },
+  { bg: "bg-purple-50", label: "text-purple-700" },
+  { bg: "bg-rose-50", label: "text-rose-700" },
+  { bg: "bg-cyan-50", label: "text-cyan-700" },
 ];
 
 interface GroupDisplayProps {
@@ -78,10 +78,10 @@ export function GroupDisplay({
         <button
           onClick={onToggleIsolation}
           disabled={!isTeacher}
-          className={`w-full py-2 rounded-lg text-sm font-semibold transition-colors flex items-center justify-center gap-2 ${
+          className={`w-full py-2.5 rounded-full text-sm font-semibold transition-all flex items-center justify-center gap-2 ${
             isIsolated
-              ? "bg-red-100 text-red-700 border border-red-300"
-              : "bg-gray-100 text-gray-600 hover:bg-gray-200 border border-gray-200"
+              ? "bg-red-100 text-red-700"
+              : "bg-gray-100/80 text-gray-600 hover:bg-gray-200/80"
           } ${!isTeacher ? "opacity-75 cursor-default" : ""}`}
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -97,13 +97,13 @@ export function GroupDisplay({
 
       {/* Floating teacher: group listening selector */}
       {isIsolated && isFloatingTeacher && (
-        <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-3">
+        <div className="bg-indigo-50 rounded-2xl p-3">
           <p className="text-xs font-semibold text-indigo-700 mb-2">Listening to:</p>
-          <div className="flex gap-1 flex-wrap">
+          <div className="flex gap-1.5 flex-wrap">
             <button
               onClick={() => onSetListeningTo(null)}
-              className={`px-3 py-1 rounded-md text-xs font-semibold transition-colors ${
-                teacherListeningTo === null ? "bg-indigo-600 text-white" : "bg-white text-indigo-600 hover:bg-indigo-100"
+              className={`px-3 py-1 rounded-full text-xs font-semibold transition-all ${
+                teacherListeningTo === null ? "bg-indigo-600 text-white shadow-sm" : "bg-white text-indigo-600 hover:bg-indigo-100"
               }`}
             >
               All
@@ -112,8 +112,8 @@ export function GroupDisplay({
               <button
                 key={i}
                 onClick={() => onSetListeningTo(i)}
-                className={`px-3 py-1 rounded-md text-xs font-semibold transition-colors ${
-                  teacherListeningTo === i ? "bg-indigo-600 text-white" : "bg-white text-indigo-600 hover:bg-indigo-100"
+                className={`px-3 py-1 rounded-full text-xs font-semibold transition-all ${
+                  teacherListeningTo === i ? "bg-indigo-600 text-white shadow-sm" : "bg-white text-indigo-600 hover:bg-indigo-100"
                 }`}
               >
                 Group {i + 1}
@@ -138,7 +138,7 @@ export function GroupDisplay({
 
       {/* Swap hint */}
       {selected && (
-        <p className="text-[11px] text-pastel-ocean text-center font-semibold animate-pulse">
+        <p className="text-[11px] text-blue-600 text-center font-semibold animate-pulse">
           Tap someone in another group to swap with {selected.userName}
         </p>
       )}
@@ -153,20 +153,20 @@ export function GroupDisplay({
           return (
             <div
               key={i}
-              className={`${color.bg} ${color.border} border rounded-lg p-3 transition-all ${
-                isIsolated && isMyGroup ? "ring-2 ring-offset-1 ring-pastel-ocean" : ""
+              className={`${color.bg} rounded-2xl p-3 transition-all ${
+                isIsolated && isMyGroup ? "ring-2 ring-offset-1 ring-blue-400" : ""
               } ${isIsolated && isFloatingTeacher && teacherListeningTo === i ? "ring-2 ring-offset-1 ring-indigo-400" : ""}`}
             >
               <div className="flex items-center gap-1.5 mb-1">
                 <p className={`text-xs font-bold ${color.label}`}>Group {i + 1}</p>
                 {isIsolated && isMyGroup && (
-                  <span className="text-[10px] bg-white/80 text-pastel-ocean font-semibold rounded px-1.5 py-0.5">Your group</span>
+                  <span className="text-[10px] bg-white/80 text-blue-600 font-semibold rounded-full px-2 py-0.5">Your group</span>
                 )}
                 {isIsolated && isFloatingTeacher && teacherListeningTo === i && (
-                  <span className="text-[10px] bg-white/80 text-indigo-600 font-semibold rounded px-1.5 py-0.5">Listening</span>
+                  <span className="text-[10px] bg-white/80 text-indigo-600 font-semibold rounded-full px-2 py-0.5">Listening</span>
                 )}
                 {(isMuted || isMutedFloating) && (
-                  <span className="text-[10px] bg-white/60 text-gray-400 rounded px-1.5 py-0.5">Muted</span>
+                  <span className="text-[10px] bg-white/60 text-gray-400 rounded-full px-2 py-0.5">Muted</span>
                 )}
               </div>
               <div className="flex flex-wrap gap-1">
@@ -178,13 +178,13 @@ export function GroupDisplay({
                       key={p.userId}
                       onClick={() => handleMemberClick(i, p)}
                       disabled={!isTeacher || !onSwapMembers}
-                      className={`text-xs rounded px-2 py-0.5 transition-all ${
+                      className={`text-xs rounded-full px-2.5 py-0.5 transition-all ${
                         isSelected
-                          ? "bg-pastel-ocean text-white ring-2 ring-pastel-ocean ring-offset-1"
+                          ? "bg-blue-500 text-white ring-2 ring-blue-400 ring-offset-1"
                           : isMuted || isMutedFloating
                             ? "bg-white/40 text-gray-400 line-through"
                             : isTeacher && isSwapTarget
-                              ? "bg-white/70 text-gray-700 hover:bg-pastel-ocean/20 hover:ring-1 hover:ring-pastel-ocean cursor-pointer"
+                              ? "bg-white/70 text-gray-700 hover:bg-blue-100 hover:ring-1 hover:ring-blue-300 cursor-pointer"
                               : isTeacher
                                 ? "bg-white/70 text-gray-700 hover:bg-white cursor-pointer"
                                 : "bg-white/70 text-gray-700"

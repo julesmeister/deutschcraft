@@ -12,12 +12,12 @@ import type { AudioControlState, GroupIsolationState } from "./audioTypes";
 
 type ToolTab = "dice" | "groups" | "picker" | "timer" | "score";
 
-const TABS: { key: ToolTab; label: string; icon: string }[] = [
-  { key: "dice", label: "Dice", icon: "🎲" },
-  { key: "groups", label: "Groups", icon: "👥" },
-  { key: "picker", label: "Picker", icon: "🎯" },
-  { key: "timer", label: "Timer", icon: "⏱" },
-  { key: "score", label: "Score", icon: "🏆" },
+const TABS: { key: ToolTab; label: string; icon: string; activeClass: string }[] = [
+  { key: "dice", label: "Dice", icon: "🎲", activeClass: "bg-amber-100 text-amber-800" },
+  { key: "groups", label: "Groups", icon: "👥", activeClass: "bg-blue-100 text-blue-800" },
+  { key: "picker", label: "Picker", icon: "🎯", activeClass: "bg-rose-100 text-rose-800" },
+  { key: "timer", label: "Timer", icon: "⏱", activeClass: "bg-teal-100 text-teal-800" },
+  { key: "score", label: "Score", icon: "🏆", activeClass: "bg-purple-100 text-purple-800" },
 ];
 
 interface ClassroomToolsProps {
@@ -59,16 +59,16 @@ export function ClassroomTools({ participants, audioControl, currentUserId, user
 
       {isOpen && (
         <div className="mt-3 space-y-3">
-          {/* Tab buttons — two rows for 5 tabs */}
-          <div className="flex gap-1 flex-wrap">
+          {/* Tab chips */}
+          <div className="flex gap-1.5 flex-wrap">
             {TABS.map((tab) => (
               <button
                 key={tab.key}
                 onClick={() => setActiveTab(tab.key)}
-                className={`flex-1 min-w-[60px] py-1.5 rounded-lg text-xs font-semibold transition-colors ${
+                className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all ${
                   activeTab === tab.key
-                    ? "bg-pastel-ocean text-white"
-                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                    ? `${tab.activeClass} shadow-sm`
+                    : "bg-gray-100/80 text-gray-500 hover:bg-gray-200/80"
                 }`}
               >
                 {tab.icon} {tab.label}

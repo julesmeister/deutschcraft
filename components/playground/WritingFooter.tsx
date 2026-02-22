@@ -24,7 +24,7 @@ export function WritingFooter({
   }
 
   return (
-    <div className="mt-auto bg-gray-900 text-white text-sm py-3 px-8 flex items-center justify-between">
+    <div className="mt-auto bg-gray-900 text-white text-sm py-3 px-8 rounded-b-3xl flex items-center justify-between">
       <div>
         {currentUserRole === 'teacher' ? (
           <>
@@ -42,10 +42,10 @@ export function WritingFooter({
       {currentUserRole === 'teacher' && (
         <button
           onClick={() => onTogglePublic(selectedWriting.writingId, selectedWriting.isPublic)}
-          className={`text-xs px-3 py-1.5 border transition-all ${
+          className={`text-xs px-3 py-1.5 rounded-full transition-all ${
             selectedWriting.isPublic
-              ? 'bg-gray-800 border-gray-600 text-white hover:bg-gray-700'
-              : 'bg-purple-600 border-purple-500 text-white hover:bg-purple-500'
+              ? 'bg-gray-800 text-white hover:bg-gray-700'
+              : 'bg-purple-600 text-white hover:bg-purple-500'
           }`}
         >
           {selectedWriting.isPublic ? '🔒 Make Private' : '🌐 Make Public'}
