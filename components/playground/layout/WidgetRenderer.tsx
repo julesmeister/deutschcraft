@@ -16,9 +16,9 @@ import { AudioPlayer } from "@/components/audio/AudioPlayer";
 import { useWidgetContext } from "./PlaygroundWidgetContext";
 import type { WidgetId } from "./types";
 
-/** Resizable wrapper for the PDF viewer with a drag handle at the bottom */
-function ResizablePDFWrapper({ children }: { children: React.ReactNode }) {
-  const [height, setHeight] = useState(600);
+/** Resizable wrapper with a drag handle at the bottom */
+function ResizablePanel({ children, initialHeight = 600 }: { children: React.ReactNode; initialHeight?: number }) {
+  const [height, setHeight] = useState(initialHeight);
   const dragging = useRef(false);
   const startY = useRef(0);
   const startH = useRef(0);
@@ -152,7 +152,7 @@ export function WidgetRenderer({ widgetId }: WidgetRendererProps) {
         );
       }
       return (
-        <ResizablePDFWrapper>
+        <ResizablePanel>
           <PDFViewer
             materialTitle={room.currentMaterialTitle}
             materialUrl={room.currentMaterialUrl}
@@ -161,7 +161,7 @@ export function WidgetRenderer({ widgetId }: WidgetRendererProps) {
             currentPage={room.currentMaterialPage}
             onPageChange={ctx.onSetMaterialPage}
           />
-        </ResizablePDFWrapper>
+        </ResizablePanel>
       );
     }
 
@@ -183,19 +183,21 @@ export function WidgetRenderer({ widgetId }: WidgetRendererProps) {
 
     case "writing-board":
       return (
-        <WritingBoard
-          writings={ctx.writings}
-          currentUserId={ctx.userId}
-          currentUserRole={ctx.userRole}
-          myWriting={ctx.myWriting}
-          isRoomPublicWriting={ctx.currentRoom.isPublicWriting}
-          hostId={ctx.currentRoom.hostId}
-          onSaveWriting={ctx.onSaveWriting}
-          onToggleWritingVisibility={ctx.onToggleWritingVisibility}
-          onToggleRoomPublicWriting={
-            ctx.userRole === "teacher" ? ctx.onToggleRoomPublicWriting : undefined
-          }
-        />
+        <ResizablePanel initialHeight={500}>
+          <WritingBoard
+            writings={ctx.writings}
+            currentUserId={ctx.userId}
+            currentUserRole={ctx.userRole}
+            myWriting={ctx.myWriting}
+            isRoomPublicWriting={ctx.currentRoom.isPublicWriting}
+            hostId={ctx.currentRoom.hostId}
+            onSaveWriting={ctx.onSaveWriting}
+            onToggleWritingVisibility={ctx.onToggleWritingVisibility}
+            onToggleRoomPublicWriting={
+              ctx.userRole === "teacher" ? ctx.onToggleRoomPublicWriting : undefined
+            }
+          />
+        </ResizablePanel>
       );
 
     default:
