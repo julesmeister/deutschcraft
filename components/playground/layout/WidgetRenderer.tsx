@@ -14,6 +14,7 @@ import { ExerciseViewer } from "@/components/playground/ExerciseViewer";
 import { PDFViewer } from "@/components/playground/PDFViewer";
 import { AudioPlayer } from "@/components/audio/AudioPlayer";
 import { NotebookWidget } from "@/components/playground/notebook/NotebookWidget";
+import { QuizWidget } from "@/components/playground/quiz/QuizWidget";
 import { useWidgetContext } from "./PlaygroundWidgetContext";
 import type { WidgetId } from "./types";
 
@@ -65,6 +66,7 @@ export function useIsWidgetActive(widgetId: WidgetId): boolean {
     case "exercise-viewer":
       return !!ctx.currentRoom.currentExerciseId;
     case "notebook":
+    case "quiz":
       return !!ctx.currentRoom.level;
     default:
       return true;
@@ -208,6 +210,15 @@ export function WidgetRenderer({ widgetId }: WidgetRendererProps) {
       return (
         <ResizablePanel initialHeight={500}>
           <NotebookWidget />
+        </ResizablePanel>
+      );
+    }
+
+    case "quiz": {
+      if (!ctx.currentRoom.level) return null;
+      return (
+        <ResizablePanel initialHeight={500}>
+          <QuizWidget />
         </ResizablePanel>
       );
     }

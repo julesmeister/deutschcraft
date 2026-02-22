@@ -7,6 +7,7 @@ import { FlashcardStatsSection } from "@/components/dashboard/FlashcardStatsSect
 import { WritingStatsSection } from "@/components/dashboard/WritingStatsSection";
 import { GrammarStatsSection } from "@/components/dashboard/GrammarStatsSection";
 import { AnswerHubStatsSection } from "@/components/dashboard/AnswerHubStatsSection";
+import { PlaygroundQuizStatsSection } from "@/components/dashboard/PlaygroundQuizStatsSection";
 import { RecentActivityTimeline } from "@/components/dashboard/RecentActivityTimeline";
 import { CategoryProgressSection } from "@/components/dashboard/CategoryProgressSection";
 import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
@@ -66,7 +67,7 @@ export default function StudentProfilePage({
   const [student, setStudent] = useState<StudentData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<
-    "flashcards" | "writing" | "grammatik" | "answerhub"
+    "flashcards" | "writing" | "grammatik" | "answerhub" | "quiz"
   >("flashcards");
 
   // Get student's study stats
@@ -449,6 +450,16 @@ export default function StudentProfilePage({
             >
               📝 Answer Hub
             </button>
+            <button
+              onClick={() => setActiveTab("quiz")}
+              className={`px-6 py-3 font-bold transition ${
+                activeTab === "quiz"
+                  ? "text-cyan-600 border-b-2 border-cyan-600"
+                  : "text-gray-500 hover:text-gray-700"
+              }`}
+            >
+              🧩 Quiz
+            </button>
           </div>
         </div>
 
@@ -468,6 +479,8 @@ export default function StudentProfilePage({
               stats={answerHubStats}
               isLoading={isLoadingAnswerHub}
             />
+          ) : activeTab === "quiz" ? (
+            <PlaygroundQuizStatsSection studentEmail={student?.email} />
           ) : null}
         </div>
 
@@ -479,6 +492,7 @@ export default function StudentProfilePage({
         )}
 
         {/* Recent Activity */}
+        {activeTab !== "quiz" && (
         <div className="bg-white border border-gray-200 rounded-2xl p-6">
           <h2 className="text-2xl font-black text-gray-900 mb-4">
             {activeTab === "flashcards"
@@ -503,6 +517,7 @@ export default function StudentProfilePage({
             hasMore={sessionPagination.hasMore}
           />
         </div>
+        )}
       </div>
     </div>
   );

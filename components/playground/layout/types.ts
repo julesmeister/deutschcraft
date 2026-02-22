@@ -10,7 +10,8 @@ export type WidgetId =
   | "writing-board"
   | "exercise-viewer"
   | "material-viewer"
-  | "notebook";
+  | "notebook"
+  | "quiz";
 
 export type PanelId = "left" | "center" | "right";
 
@@ -76,13 +77,19 @@ export const WIDGET_CONFIGS: Record<WidgetId, WidgetConfig> = {
     defaultPanel: "right",
     defaultOrder: 1,
   },
+  quiz: {
+    id: "quiz",
+    label: "Quiz",
+    defaultPanel: "center",
+    defaultOrder: 2,
+  },
 };
 
 export const ALL_WIDGET_IDS: WidgetId[] = Object.keys(WIDGET_CONFIGS) as WidgetId[];
 
 export const DEFAULT_LAYOUT: LayoutState = {
   leftWidgets: ["video-panel", "participants", "classroom-tools"],
-  centerWidgets: ["material-viewer", "exercise-viewer"],
+  centerWidgets: ["material-viewer", "exercise-viewer", "quiz"],
   rightWidgets: ["writing-board", "notebook"],
   leftPanelSize: 22,
   rightPanelSize: 30,
