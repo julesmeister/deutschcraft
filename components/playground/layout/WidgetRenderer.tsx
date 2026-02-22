@@ -66,8 +66,9 @@ export function useIsWidgetActive(widgetId: WidgetId): boolean {
     case "exercise-viewer":
       return !!ctx.currentRoom.currentExerciseId;
     case "notebook":
-    case "quiz":
       return !!ctx.currentRoom.level;
+    case "quiz":
+      return true;
     default:
       return true;
   }
@@ -214,14 +215,12 @@ export function WidgetRenderer({ widgetId }: WidgetRendererProps) {
       );
     }
 
-    case "quiz": {
-      if (!ctx.currentRoom.level) return null;
+    case "quiz":
       return (
         <ResizablePanel initialHeight={500}>
           <QuizWidget />
         </ResizablePanel>
       );
-    }
 
     default:
       return null;
