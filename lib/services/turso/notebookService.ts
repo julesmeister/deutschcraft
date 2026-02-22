@@ -12,6 +12,7 @@ export function rowToPage(row: any): NotebookPage {
     level: row.level as string,
     title: row.title as string,
     content: JSON.parse((row.content as string) || '{}'),
+    blockAuthors: JSON.parse((row.block_authors as string) || '{}'),
     pageOrder: row.page_order as number,
     createdBy: row.created_by as string,
     createdAt: row.created_at as number,
@@ -72,7 +73,7 @@ export async function createNotebookPage(
       args: [pageId, level, title, pageOrder, createdBy, now, now],
     });
 
-    return { pageId, level, title, content: {}, pageOrder, createdBy, createdAt: now, updatedAt: now };
+    return { pageId, level, title, content: {}, blockAuthors: {}, pageOrder, createdBy, createdAt: now, updatedAt: now };
   } catch (error) {
     console.error('[notebookService] createNotebookPage error:', error);
     return null;
@@ -81,12 +82,46 @@ export async function createNotebookPage(
 
 export async function updateNotebookPageContent(
   pageId: string,
-  content: object
+  content: object,
+  userId?: string,
+  userName?: string
 ): Promise<void> {
   try {
+    if (!userId || !userName) {
+      // No user info — just save content (backwards compat)
+      await db.execute({
+        sql: 'UPDATE notebook_pages SET content = ? WHERE page_id = ?',
+        args: [JSON.stringify(content), pageId],
+      });
+      return;
+    }
+
+    // Fetch current page to diff blocks
+    const current = await db.execute({
+      sql: 'SELECT content, block_authors FROM notebook_pages WHERE page_id = ?',
+      args: [pageId],
+    });
+    const oldContent: Record<string, any> = JSON.parse((current.rows[0]?.content as string) || '{}');
+    const blockAuthors: Record<string, any> = JSON.parse((current.rows[0]?.block_authors as string) || '{}');
+    const newContent = content as Record<string, any>;
+    const now = Date.now();
+
+    // Find blocks that were added or modified
+    for (const blockId of Object.keys(newContent)) {
+      const oldBlock = oldContent[blockId];
+      const newBlock = newContent[blockId];
+      if (!oldBlock || JSON.stringify(oldBlock) !== JSON.stringify(newBlock)) {
+        blockAuthors[blockId] = { userId, userName, at: now };
+      }
+    }
+    // Clean up authors for deleted blocks
+    for (const blockId of Object.keys(blockAuthors)) {
+      if (!newContent[blockId]) delete blockAuthors[blockId];
+    }
+
     await db.execute({
-      sql: 'UPDATE notebook_pages SET content = ? WHERE page_id = ?',
-      args: [JSON.stringify(content), pageId],
+      sql: 'UPDATE notebook_pages SET content = ?, block_authors = ? WHERE page_id = ?',
+      args: [JSON.stringify(content), JSON.stringify(blockAuthors), pageId],
     });
   } catch (error) {
     console.error('[notebookService] updateNotebookPageContent error:', error);

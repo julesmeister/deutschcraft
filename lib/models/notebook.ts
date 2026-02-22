@@ -3,11 +3,19 @@
  * Types for the collaborative notebook widget (per CEFR level)
  */
 
+/** Per-block edit attribution */
+export interface BlockAuthor {
+  userId: string;
+  userName: string;
+  at: number;           // timestamp
+}
+
 export interface NotebookPage {
   pageId: string;
   level: string;
   title: string;
   content: object;      // Yoopta JSON
+  blockAuthors: Record<string, BlockAuthor>;  // blockId → who last edited it
   pageOrder: number;
   createdBy: string;
   createdAt: number;

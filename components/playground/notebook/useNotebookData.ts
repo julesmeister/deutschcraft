@@ -35,6 +35,7 @@ export function useNotebookData(props: NotebookWidgetProps) {
   const [showExportDialog, setShowExportDialog] = useState(false);
   const [showPageDirectory, setShowPageDirectory] = useState(false);
   const [activeCellInput, setActiveCellInput] = useState<CellAddress | null>(null);
+  const [isRefreshing, setIsRefreshing] = useState(false);
   const saveTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const currentPage = pages[currentPageIndex] || null;
@@ -161,6 +162,12 @@ export function useNotebookData(props: NotebookWidgetProps) {
     if (isTeacher && ctx?.onSetNotebookPage) await ctx.onSetNotebookPage(pages[newIndex].pageId);
   };
 
+  const handleRefresh = async () => {
+    setIsRefreshing(true);
+    await Promise.all([fetchPages(), fetchEntries(), fetchCellEntries()]);
+    setIsRefreshing(false);
+  };
+
   const handleSubmitEntry = async (content: object) => {
     if (!currentPage || !level) return;
     await fetch("/api/notebook", {
@@ -218,19 +225,24 @@ export function useNotebookData(props: NotebookWidgetProps) {
   };
 
   const handleEditorChange = useCallback(
-    (value: YooptaContentValue, updateCaret: () => void) => {
+    (value: YooptaContentValue) => {
       if (!currentPage) return;
-      requestAnimationFrame(updateCaret);
       if (saveTimeoutRef.current) clearTimeout(saveTimeoutRef.current);
       saveTimeoutRef.current = setTimeout(() => {
         fetch("/api/notebook", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ action: "updateContent", pageId: currentPage.pageId, content: value }),
+          body: JSON.stringify({
+            action: "updateContent",
+            pageId: currentPage.pageId,
+            content: value,
+            userId,
+            userName,
+          }),
         });
       }, 1000);
     },
-    [currentPage]
+    [currentPage, userId, userName]
   );
 
   // Visible entries (teacher sees all, student sees approved + own)
@@ -242,12 +254,15 @@ export function useNotebookData(props: NotebookWidgetProps) {
   // Visible cell entries
   const pendingCellEntries = cellEntries.filter(e => e.status === "pending");
 
+  // Block authorship for the current page
+  const blockAuthors = currentPage?.blockAuthors ?? {};
+
   return {
     // Identity
     userId, userName, userRole, isTeacher, level,
     // Pages
     pages, currentPage, currentPageIndex, entryStats,
-    isLoading, editorKey, editor, initialEditorValue,
+    isLoading, editorKey, editor, initialEditorValue, blockAuthors,
     // Entries
     entries, visibleEntries, pendingEntries,
     // Cell entries
@@ -259,8 +274,8 @@ export function useNotebookData(props: NotebookWidgetProps) {
     showPageDirectory, setShowPageDirectory,
     // Handlers
     handleGoToPage, handleCreatePage, handleDeletePage,
-    handleSaveTitle, handleNavigate, handleSubmitEntry,
-    handleReviewEntry, handleEditorChange,
+    handleSaveTitle, handleNavigate, handleRefresh, isRefreshing,
+    handleSubmitEntry, handleReviewEntry, handleEditorChange,
     handleSubmitCellEntry, handleReviewCellEntry,
   };
 }

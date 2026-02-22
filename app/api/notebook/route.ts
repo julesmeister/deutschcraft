@@ -66,9 +66,9 @@ export async function POST(req: NextRequest) {
       }
 
       case 'updateContent': {
-        const { pageId, content } = body;
+        const { pageId, content, userId, userName } = body;
         if (!pageId) return NextResponse.json({ error: 'pageId required' }, { status: 400 });
-        await updateNotebookPageContent(pageId, content);
+        await updateNotebookPageContent(pageId, content, userId, userName);
         return NextResponse.json({ success: true });
       }
 

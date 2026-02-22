@@ -6,7 +6,7 @@
 
 "use client";
 
-import { useState, useEffect, useCallback, useRef, useMemo } from "react";
+import { useCallback, useRef, useMemo } from "react";
 import YooptaEditor, { type YooptaContentValue } from "@yoopta/editor";
 import ActionMenuList, { DefaultActionMenuRender } from "@yoopta/action-menu-list";
 import Toolbar, { DefaultToolbarRender } from "@yoopta/toolbar";
@@ -14,7 +14,7 @@ import { YOOPTA_PLUGINS, YOOPTA_MARKS } from "./NotebookToolbar";
 import { NotebookExportDialog } from "./NotebookExportDialog";
 import { NotebookPageDirectory } from "./NotebookPageDirectory";
 import { NotebookHeader } from "./NotebookHeader";
-import { NotebookCursor } from "./NotebookCursor";
+import { BlockAuthorOverlay } from "./BlockAuthorOverlay";
 import { TableCellOverlay } from "./TableCellOverlay";
 import { useNotebookData, type NotebookWidgetProps } from "./useNotebookData";
 
@@ -23,20 +23,18 @@ export function NotebookWidget(props: NotebookWidgetProps = {}) {
   const {
     userId, userName, isTeacher, level,
     pages, currentPage, currentPageIndex, entryStats,
-    isLoading, editorKey, editor, initialEditorValue,
-    pendingEntries,
+    isLoading, editorKey, editor, initialEditorValue, blockAuthors,
     cellEntries, pendingCellEntries,
     activeCellInput, setActiveCellInput,
     editingTitle, setEditingTitle, titleDraft, setTitleDraft,
     showExportDialog, setShowExportDialog,
     showPageDirectory, setShowPageDirectory,
     handleGoToPage, handleCreatePage, handleDeletePage,
-    handleSaveTitle, handleNavigate,
+    handleSaveTitle, handleNavigate, handleRefresh, isRefreshing,
     handleReviewEntry, handleEditorChange,
     handleSubmitCellEntry, handleReviewCellEntry,
   } = nb;
 
-  const [cursorPos, setCursorPos] = useState<{ x: number; y: number } | null>(null);
   const editorContainerRef = useRef<HTMLDivElement>(null);
 
   const TOOLS = useMemo(() => ({
@@ -44,39 +42,10 @@ export function NotebookWidget(props: NotebookWidgetProps = {}) {
     Toolbar: { render: DefaultToolbarRender, tool: Toolbar },
   }), []);
 
-  // Track caret position inside editor container
-  const updateCaret = useCallback(() => {
-    const sel = window.getSelection();
-    if (!sel || sel.rangeCount === 0 || !editorContainerRef.current) return;
-    const range = sel.getRangeAt(0).cloneRange();
-    range.collapse(true);
-    const rect = range.getBoundingClientRect();
-    const box = editorContainerRef.current.getBoundingClientRect();
-    if (rect.height === 0) return;
-    setCursorPos({ x: rect.left - box.left, y: rect.top - box.top });
-  }, []);
-
-  // Track cursor on selection change
-  useEffect(() => {
-    const onSelChange = () => {
-      if (!editorContainerRef.current) return;
-      const sel = window.getSelection();
-      if (!sel || sel.rangeCount === 0) return;
-      if (editorContainerRef.current.contains(sel.anchorNode)) {
-        requestAnimationFrame(updateCaret);
-      }
-    };
-    document.addEventListener("selectionchange", onSelChange);
-    return () => document.removeEventListener("selectionchange", onSelChange);
-  }, [updateCaret]);
-
   const onEditorChange = useCallback(
-    (value: YooptaContentValue) => handleEditorChange(value, updateCaret),
-    [handleEditorChange, updateCaret]
+    (value: YooptaContentValue) => handleEditorChange(value),
+    [handleEditorChange]
   );
-
-  const pendingCount = pendingEntries.length;
-  const firstPending = pendingEntries[0] ?? null;
 
   // ─── Early returns ───
   if (!level) {
@@ -112,6 +81,8 @@ export function NotebookWidget(props: NotebookWidgetProps = {}) {
         onExport={() => setShowExportDialog(true)}
         onCreatePage={handleCreatePage}
         onDeletePage={handleDeletePage}
+        onRefresh={handleRefresh}
+        isRefreshing={isRefreshing}
       />
 
       <div className="flex-1 overflow-y-auto min-h-0">
@@ -172,17 +143,12 @@ export function NotebookWidget(props: NotebookWidgetProps = {}) {
                   style={{ width: "100%" }}
                 />
 
-                {cursorPos && (
-                  <NotebookCursor
-                    cursorPos={cursorPos}
-                    userName={userName}
-                    isTeacher={isTeacher}
-                    pendingCount={pendingCount}
-                    firstPending={firstPending}
-                    containerWidth={editorContainerRef.current?.clientWidth ?? 600}
-                    onReview={handleReviewEntry}
-                  />
-                )}
+                <BlockAuthorOverlay
+                  editorContainerRef={editorContainerRef}
+                  editorKey={editorKey}
+                  blockAuthors={blockAuthors}
+                  currentUserId={userId}
+                />
 
                 <TableCellOverlay
                   editorContainerRef={editorContainerRef}
