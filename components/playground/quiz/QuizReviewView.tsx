@@ -1,6 +1,6 @@
 /**
  * QuizReviewView — Teacher grading + score summary
- * M3 Expressive: tonal surfaces, visible grade buttons, rich score cards
+ * M3 Expressive: tonal surfaces, segmented nav, outlined cards, state layers
  */
 
 "use client";
@@ -53,15 +53,15 @@ export function QuizReviewView({ data }: QuizReviewViewProps) {
   if (isFinished) {
     return (
       <div className="p-5">
-        <div className="flex items-center justify-between mb-5">
+        <div className="flex items-center justify-between mb-6">
           <div>
-            <h3 className="text-lg font-bold text-gray-900">Quiz Results</h3>
-            {currentQuiz && <p className="text-xs text-gray-400 mt-0.5">{currentQuiz.title}</p>}
+            <h3 className="text-[22px] font-semibold text-[#1D1B20] leading-7">Quiz Results</h3>
+            {currentQuiz && <p className="text-[11px] text-[#79747E] mt-1 font-medium tracking-wide uppercase">{currentQuiz.title}</p>}
           </div>
           {isTeacher && (
             <button
               onClick={handleClearSession}
-              className="px-4 py-2 bg-white text-gray-600 text-sm font-semibold rounded-xl hover:bg-gray-50 active:scale-[0.97] transition-all shadow-sm"
+              className="h-10 px-5 bg-transparent text-[#6750A4] text-sm font-medium rounded-full border border-[#79747E] hover:bg-[#6750A4]/8 active:scale-[0.97] transition-all"
             >
               Close
             </button>
@@ -73,32 +73,40 @@ export function QuizReviewView({ data }: QuizReviewViewProps) {
           <div className="space-y-2 mb-4">
             {studentScores.map((s, i) => {
               const pct = s.total > 0 ? Math.round((s.correct / s.total) * 100) : 0;
+              // M3 ranking colors
+              const rankBg = i === 0 ? "#FFD8E4" : i === 1 ? "#E8DEF8" : "#E7E0EC";
+              const rankFg = i === 0 ? "#633B48" : i === 1 ? "#6750A4" : "#49454F";
               return (
-                <div key={i} className="flex items-center gap-3 p-4 bg-white rounded-2xl shadow-sm">
-                  <span className={`w-8 h-8 text-sm font-bold rounded-full flex items-center justify-center shrink-0 ${
-                    i === 0 ? "bg-amber-100 text-amber-600" : i === 1 ? "bg-gray-100 text-gray-500" : "bg-orange-50 text-orange-400"
-                  }`}>
+                <div key={i} className="flex items-center gap-3 p-4 bg-[#FFFBFE] rounded-[16px] border border-[#CAC4D0]">
+                  <span
+                    className="w-9 h-9 text-sm font-bold rounded-full flex items-center justify-center shrink-0"
+                    style={{ backgroundColor: rankBg, color: rankFg }}
+                  >
                     {i + 1}
                   </span>
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm font-semibold text-gray-800 truncate">{s.userName}</p>
-                    <div className="mt-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                    <p className="text-sm font-medium text-[#1D1B20] truncate">{s.userName}</p>
+                    {/* M3 linear progress indicator */}
+                    <div className="mt-1.5 h-1 bg-[#E7E0EC] rounded-full overflow-hidden">
                       <div
-                        className={`h-full rounded-full transition-all ${pct >= 70 ? "bg-emerald-400" : pct >= 40 ? "bg-amber-400" : "bg-red-400"}`}
-                        style={{ width: `${pct}%` }}
+                        className="h-full rounded-full transition-all duration-500"
+                        style={{
+                          width: `${pct}%`,
+                          backgroundColor: pct >= 70 ? "#4CAF50" : pct >= 40 ? "#FF9800" : "#BA1A1A",
+                        }}
                       />
                     </div>
                   </div>
                   <div className="text-right shrink-0">
-                    <span className="text-sm font-bold text-gray-900">{s.correct}/{s.total}</span>
-                    <p className="text-xs text-gray-400">{pct}%</p>
+                    <span className="text-sm font-bold text-[#1D1B20] tabular-nums">{s.correct}/{s.total}</span>
+                    <p className="text-[11px] text-[#79747E] tabular-nums">{pct}%</p>
                   </div>
                 </div>
               );
             })}
             {studentScores.length === 0 && (
-              <div className="text-center py-6">
-                <p className="text-sm text-gray-400">No answers submitted</p>
+              <div className="text-center py-8">
+                <p className="text-sm text-[#79747E]">No answers submitted</p>
               </div>
             )}
           </div>
@@ -107,37 +115,39 @@ export function QuizReviewView({ data }: QuizReviewViewProps) {
         {/* Student: my results */}
         {!isTeacher && (
           <div>
-            {/* Score hero */}
+            {/* Score hero — M3 filled card */}
             {myAnswers.length > 0 && (
-              <div className="p-5 bg-violet-100 rounded-2xl text-center mb-5">
-                <p className="text-sm font-medium text-violet-500 mb-1">Your Score</p>
-                <p className="text-3xl font-black text-violet-700">
+              <div className="p-6 bg-[#EADDFF] rounded-[16px] text-center mb-5">
+                <p className="text-sm font-medium text-[#6750A4] mb-1">Your Score</p>
+                <p className="text-4xl font-bold text-[#21005D] tabular-nums">
                   {myAnswers.filter((a) => a.isCorrect).length}/{myAnswers.length}
                 </p>
               </div>
             )}
 
-            <div className="space-y-2.5">
+            <div className="space-y-2">
               {questions.map((q, idx) => {
                 const myAnswer = myAnswers.find((a) => a.questionId === q.questionId);
                 const isCorrect = myAnswer?.isCorrect === true;
                 const isWrong = myAnswer?.isCorrect === false;
+                // M3 tonal surface colors
+                const cardBg = isCorrect ? "#C8FFC7" : isWrong ? "#FFDAD6" : "#FFFBFE";
+                const cardBorder = isCorrect ? "#4CAF50" : isWrong ? "#BA1A1A" : "#CAC4D0";
                 return (
-                  <div key={q.questionId} className={`p-4 rounded-2xl shadow-sm ${
-                    isCorrect ? "bg-emerald-50" : isWrong ? "bg-red-50" : "bg-white"
-                  }`}>
-                    <div className="flex items-center gap-2 mb-1.5">
-                      <span className="w-6 h-6 bg-violet-100 text-violet-600 text-xs font-bold rounded-full flex items-center justify-center">
+                  <div key={q.questionId} className="p-4 rounded-[16px] border" style={{ backgroundColor: cardBg, borderColor: `${cardBorder}40` }}>
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="w-7 h-7 bg-[#6750A4] text-white text-xs font-bold rounded-full flex items-center justify-center">
                         {idx + 1}
                       </span>
-                      {isCorrect && <span className="text-xs bg-emerald-100 text-emerald-600 px-2 py-0.5 rounded-lg font-semibold">Correct</span>}
-                      {isWrong && <span className="text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded-lg font-semibold">Incorrect</span>}
-                      {myAnswer && myAnswer.isCorrect === null && <span className="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded-lg font-semibold">Pending</span>}
-                      {!myAnswer && <span className="text-xs bg-gray-100 text-gray-400 px-2 py-0.5 rounded-lg font-semibold">Skipped</span>}
+                      {/* M3 status chip */}
+                      {isCorrect && <span className="text-[11px] h-6 px-2.5 rounded-[8px] font-medium bg-[#1B5E20]/10 text-[#1B5E20] flex items-center">Correct</span>}
+                      {isWrong && <span className="text-[11px] h-6 px-2.5 rounded-[8px] font-medium bg-[#BA1A1A]/10 text-[#BA1A1A] flex items-center">Incorrect</span>}
+                      {myAnswer && myAnswer.isCorrect === null && <span className="text-[11px] h-6 px-2.5 rounded-[8px] font-medium bg-[#E7E0EC] text-[#49454F] flex items-center">Pending</span>}
+                      {!myAnswer && <span className="text-[11px] h-6 px-2.5 rounded-[8px] font-medium bg-[#E7E0EC] text-[#79747E] flex items-center">Skipped</span>}
                     </div>
-                    <p className="text-sm text-gray-800 mb-1">{q.questionText}</p>
+                    <p className="text-sm text-[#1D1B20] mb-1">{q.questionText}</p>
                     {myAnswer && (
-                      <p className="text-xs text-gray-500">Your answer: <span className="font-semibold text-gray-700">{myAnswer.answerText}</span></p>
+                      <p className="text-[11px] text-[#49454F]">Your answer: <span className="font-semibold text-[#1D1B20]">{myAnswer.answerText}</span></p>
                     )}
                   </div>
                 );
@@ -159,36 +169,40 @@ export function QuizReviewView({ data }: QuizReviewViewProps) {
   return (
     <div className="p-5">
       <div className="flex items-center justify-between mb-5">
-        <h3 className="text-lg font-bold text-gray-900">Review Answers</h3>
+        <h3 className="text-[22px] font-semibold text-[#1D1B20] leading-7">Review</h3>
+        {/* M3 filled tonal button */}
         <button
           onClick={handleEndQuiz}
-          className="flex items-center gap-1.5 px-4 py-2.5 bg-emerald-500 text-white text-sm font-semibold rounded-2xl hover:bg-emerald-600 active:scale-[0.97] transition-all shadow-sm"
+          className="flex items-center gap-2 h-10 px-5 bg-[#6750A4] text-white text-sm font-medium rounded-full hover:shadow-[0_1px_3px_1px_rgba(0,0,0,0.15)] active:scale-[0.97] transition-all"
         >
           Finish
           {ungradedCount > 0 && (
-            <span className="bg-white/20 text-xs px-1.5 py-0.5 rounded-full">{ungradedCount} left</span>
+            <span className="bg-white/20 text-[11px] px-2 py-0.5 rounded-full tabular-nums">{ungradedCount} left</span>
           )}
         </button>
       </div>
 
-      {/* Question nav pills */}
-      <div className="flex gap-1.5 mb-5 overflow-x-auto pb-1">
+      {/* M3 segmented button navigation */}
+      <div className="flex gap-0 mb-5 overflow-x-auto pb-1 rounded-full border border-[#79747E]" style={{ width: "fit-content" }}>
         {questions.map((_, idx) => {
           const qAnswers = answers.filter((a) => a.questionId === questions[idx].questionId);
           const allGraded = qAnswers.length > 0 && qAnswers.every((a) => a.isCorrect !== null && a.isCorrect !== undefined);
+          const isActive = idx === reviewQuestionIndex;
           return (
             <button
               key={idx}
               onClick={() => setReviewQuestionIndex(idx)}
-              className={`shrink-0 w-9 h-9 rounded-xl text-xs font-bold transition-all active:scale-95 ${
-                idx === reviewQuestionIndex
-                  ? "bg-violet-600 text-white shadow-sm"
+              className={`shrink-0 h-8 min-w-[40px] px-3 text-[11px] font-bold transition-all ${
+                idx > 0 ? "border-l border-[#79747E]" : ""
+              } ${
+                isActive
+                  ? "bg-[#E8DEF8] text-[#1D1B20]"
                   : allGraded
-                  ? "bg-emerald-100 text-emerald-600"
-                  : "bg-white text-gray-500 shadow-sm hover:bg-gray-50"
+                  ? "bg-[#C8FFC7]/40 text-[#1B5E20]"
+                  : "bg-transparent text-[#49454F] hover:bg-[#1D1B20]/8"
               }`}
             >
-              {idx + 1}
+              {allGraded && !isActive && "✓ "}{idx + 1}
             </button>
           );
         })}
@@ -197,20 +211,20 @@ export function QuizReviewView({ data }: QuizReviewViewProps) {
       {/* Question + answers */}
       {reviewQuestion && (
         <div>
-          <div className="mb-4 p-4 bg-white rounded-2xl shadow-sm">
-            <p className="text-sm font-semibold text-gray-800 leading-relaxed">{reviewQuestion.questionText}</p>
+          {/* M3 outlined card */}
+          <div className="mb-4 p-4 bg-[#FFFBFE] rounded-[16px] border border-[#CAC4D0]">
+            <p className="text-sm font-medium text-[#1D1B20] leading-relaxed">{reviewQuestion.questionText}</p>
             {reviewQuestion.correctAnswer && (
-              <div className="flex items-center gap-1.5 mt-2">
-                <span className="w-5 h-5 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-xs">&#10003;</span>
-                <span className="text-xs font-semibold text-emerald-600">{reviewQuestion.correctAnswer}</span>
+              <div className="flex items-center gap-2 mt-3 h-7 px-3 rounded-[8px] bg-[#C8FFC7] w-fit">
+                <span className="text-[11px] font-bold text-[#1B5E20]">&#10003; {reviewQuestion.correctAnswer}</span>
               </div>
             )}
           </div>
 
           <div className="space-y-2">
             {questionAnswers.length === 0 ? (
-              <div className="text-center py-6">
-                <p className="text-sm text-gray-400">No answers for this question</p>
+              <div className="text-center py-8">
+                <p className="text-sm text-[#79747E]">No answers for this question</p>
               </div>
             ) : (
               questionAnswers.map((answer) => (
@@ -229,7 +243,7 @@ export function QuizReviewView({ data }: QuizReviewViewProps) {
   );
 }
 
-// ─── Answer Grading Row ───
+// ─── Answer Grading Row — M3 card with state layers ───
 
 function AnswerGradeRow({
   answer,
@@ -242,21 +256,29 @@ function AnswerGradeRow({
 }) {
   const isGraded = answer.isCorrect !== null && answer.isCorrect !== undefined;
 
+  // M3 tonal surface based on grade
+  const bg = isGraded
+    ? answer.isCorrect ? "#C8FFC7" : "#FFDAD6"
+    : "#FFFBFE";
+  const border = isGraded
+    ? answer.isCorrect ? "#4CAF50" : "#BA1A1A"
+    : "#CAC4D0";
+
   return (
-    <div className={`flex items-center justify-between p-4 rounded-2xl transition-all ${
-      isGraded
-        ? answer.isCorrect ? "bg-emerald-50" : "bg-red-50"
-        : "bg-white shadow-sm"
-    }`}>
+    <div
+      className="flex items-center justify-between p-4 rounded-[16px] border transition-all"
+      style={{ backgroundColor: bg, borderColor: `${border}40` }}
+    >
       <div className="flex-1 min-w-0">
-        <p className="text-xs font-semibold text-gray-400 mb-0.5">{answer.userName}</p>
-        <p className="text-sm text-gray-800">{answer.answerText}</p>
+        <p className="text-[11px] font-bold text-[#79747E] mb-0.5 tracking-wide uppercase">{answer.userName}</p>
+        <p className="text-sm text-[#1D1B20]">{answer.answerText}</p>
       </div>
       {isTeacher && !isGraded && (
         <div className="flex gap-2 ml-3 shrink-0">
+          {/* M3 filled tonal icon buttons */}
           <button
             onClick={() => onGrade(answer.answerId, true)}
-            className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 hover:bg-emerald-200 flex items-center justify-center transition-all active:scale-95 font-bold"
+            className="w-10 h-10 rounded-full bg-[#C8FFC7] text-[#1B5E20] hover:bg-[#A5D6A7] flex items-center justify-center transition-all active:scale-95"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
@@ -264,7 +286,7 @@ function AnswerGradeRow({
           </button>
           <button
             onClick={() => onGrade(answer.answerId, false)}
-            className="w-10 h-10 rounded-xl bg-red-100 text-red-500 hover:bg-red-200 flex items-center justify-center transition-all active:scale-95 font-bold"
+            className="w-10 h-10 rounded-full bg-[#FFDAD6] text-[#BA1A1A] hover:bg-[#FFB4AB] flex items-center justify-center transition-all active:scale-95"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -273,8 +295,8 @@ function AnswerGradeRow({
         </div>
       )}
       {isGraded && (
-        <span className={`ml-3 text-xs font-bold px-2.5 py-1 rounded-lg ${
-          answer.isCorrect ? "bg-emerald-100 text-emerald-600" : "bg-red-100 text-red-500"
+        <span className={`ml-3 text-[11px] font-bold h-6 px-2.5 rounded-[8px] flex items-center ${
+          answer.isCorrect ? "bg-[#1B5E20]/10 text-[#1B5E20]" : "bg-[#BA1A1A]/10 text-[#BA1A1A]"
         }`}>
           {answer.isCorrect ? "Correct" : "Incorrect"}
         </span>
