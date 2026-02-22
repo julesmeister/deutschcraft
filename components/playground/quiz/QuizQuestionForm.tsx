@@ -22,7 +22,7 @@ export function QuizQuestionForm({ onAdd }: QuizQuestionFormProps) {
   const [questionType, setQuestionType] = useState<"text" | "multiple_choice">("text");
   const [choices, setChoices] = useState(["", "", "", ""]);
   const [correctIndex, setCorrectIndex] = useState(0);
-  const [timeLimit, setTimeLimit] = useState(60);
+  const [timeLimit, setTimeLimit] = useState(15);
   const [isAdding, setIsAdding] = useState(false);
 
   const handleSubmit = async () => {
@@ -85,22 +85,32 @@ export function QuizQuestionForm({ onAdd }: QuizQuestionFormProps) {
           </button>
         </div>
 
-        {/* Time chip — M3 input chip style */}
-        <div className="flex items-center gap-1.5 h-8 px-3 rounded-[8px] bg-transparent">
-          <svg className="w-[14px] h-[14px] text-[#49454F]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+        {/* M3 time limit chip group */}
+        <div className="flex items-center gap-1">
+          <svg className="w-[14px] h-[14px] text-[#49454F] mr-0.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          <select
-            value={timeLimit}
-            onChange={(e) => setTimeLimit(Number(e.target.value))}
-            className="text-[11px] font-medium text-[#49454F] bg-transparent focus:outline-none cursor-pointer"
-          >
-            <option value={30}>30s</option>
-            <option value={60}>60s</option>
-            <option value={90}>90s</option>
-            <option value={120}>2min</option>
-            <option value={180}>3min</option>
-          </select>
+          {[
+            { value: 5, label: "5s" },
+            { value: 10, label: "10s" },
+            { value: 15, label: "15s" },
+            { value: 20, label: "20s" },
+            { value: 25, label: "25s" },
+            { value: 30, label: "30s" },
+          ].map((t) => (
+            <button
+              key={t.value}
+              type="button"
+              onClick={() => setTimeLimit(t.value)}
+              className={`h-7 min-w-[32px] px-2 rounded-full text-[11px] font-medium transition-all ${
+                timeLimit === t.value
+                  ? "bg-[#6750A4] text-white"
+                  : "bg-[#E7E0EC] text-[#49454F] hover:bg-[#D0BCFF]"
+              }`}
+            >
+              {t.label}
+            </button>
+          ))}
         </div>
       </div>
 
@@ -140,7 +150,7 @@ export function QuizQuestionForm({ onAdd }: QuizQuestionFormProps) {
       <button
         onClick={handleSubmit}
         disabled={!questionText.trim() || isAdding}
-        className="mt-4 w-full h-10 bg-[#6750A4] text-white text-sm font-medium rounded-full hover:shadow-[0_1px_3px_1px_rgba(0,0,0,0.15)] active:scale-[0.98] transition-all disabled:opacity-38 disabled:shadow-none"
+        className="mt-4 w-full h-10 bg-[#6750A4] text-white text-sm font-medium rounded-full active:scale-[0.98] transition-all disabled:opacity-38"
       >
         {isAdding ? "Adding..." : "Add Question"}
       </button>

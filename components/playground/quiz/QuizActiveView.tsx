@@ -144,7 +144,7 @@ export function QuizActiveView({ data }: QuizActiveViewProps) {
           <button
             onClick={handleSubmit}
             disabled={isSubmitting || (!answerText.trim() && !selectedChoice)}
-            className="w-full h-12 bg-[#6750A4] text-white font-medium rounded-full hover:shadow-[0_1px_3px_1px_rgba(0,0,0,0.15)] active:scale-[0.98] transition-all disabled:opacity-38 disabled:shadow-none"
+            className="w-full h-12 bg-[#6750A4] text-white font-medium rounded-full active:scale-[0.98] transition-all disabled:opacity-38"
           >
             {isSubmitting ? "Submitting..." : "Submit Answer"}
           </button>
@@ -181,8 +181,8 @@ export function QuizActiveView({ data }: QuizActiveViewProps) {
               onClick={handleNextQuestion}
               className={`flex-1 h-10 font-medium rounded-full transition-all active:scale-[0.98] text-sm ${
                 isLastQuestion
-                  ? "bg-[#FFD8E4] text-[#633B48] hover:shadow-[0_1px_3px_1px_rgba(0,0,0,0.15)]"
-                  : "bg-[#6750A4] text-white hover:shadow-[0_1px_3px_1px_rgba(0,0,0,0.15)]"
+                  ? "bg-[#FFD8E4] text-[#633B48]"
+                  : "bg-[#6750A4] text-white"
               }`}
             >
               {isLastQuestion ? "Finish & Review" : "Next Question"}

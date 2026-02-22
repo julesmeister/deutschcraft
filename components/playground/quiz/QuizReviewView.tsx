@@ -173,7 +173,7 @@ export function QuizReviewView({ data }: QuizReviewViewProps) {
         {/* M3 filled tonal button */}
         <button
           onClick={handleEndQuiz}
-          className="flex items-center gap-2 h-10 px-5 bg-[#6750A4] text-white text-sm font-medium rounded-full hover:shadow-[0_1px_3px_1px_rgba(0,0,0,0.15)] active:scale-[0.97] transition-all"
+          className="flex items-center gap-2 h-10 px-5 bg-[#6750A4] text-white text-sm font-medium rounded-full active:scale-[0.97] transition-all"
         >
           Finish
           {ungradedCount > 0 && (

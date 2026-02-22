@@ -38,7 +38,7 @@ export function QuizSetManager({ data }: QuizSetManagerProps) {
           {!showNewQuiz && (
             <button
               onClick={() => setShowNewQuiz(true)}
-              className="h-14 w-14 bg-[#EADDFF] hover:bg-[#D0BCFF] text-[#21005D] rounded-[16px] flex items-center justify-center transition-all duration-200 active:scale-95 shadow-[0_1px_3px_1px_rgba(0,0,0,0.15),0_1px_2px_rgba(0,0,0,0.3)]"
+              className="h-14 w-14 bg-[#EADDFF] hover:bg-[#D0BCFF] text-[#21005D] rounded-[16px] flex items-center justify-center transition-all duration-200 active:scale-95"
               title="New Quiz"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -76,7 +76,7 @@ export function QuizSetManager({ data }: QuizSetManagerProps) {
                   }
                 }}
                 disabled={!newTitle.trim()}
-                className="flex-1 h-10 bg-[#6750A4] text-white text-sm font-medium rounded-full hover:shadow-[0_1px_3px_1px_rgba(0,0,0,0.15)] active:scale-[0.98] transition-all disabled:opacity-38 disabled:shadow-none"
+                className="flex-1 h-10 bg-[#6750A4] text-white text-sm font-medium rounded-full active:scale-[0.98] transition-all disabled:opacity-38"
               >
                 Create
               </button>
@@ -116,7 +116,7 @@ export function QuizSetManager({ data }: QuizSetManagerProps) {
             </div>
             <button
               onClick={() => setShowNewQuiz(true)}
-              className="h-10 px-6 bg-[#6750A4] text-white text-sm font-medium rounded-full hover:shadow-[0_1px_3px_1px_rgba(0,0,0,0.15)] active:scale-[0.98] transition-all"
+              className="h-10 px-6 bg-[#6750A4] text-white text-sm font-medium rounded-full active:scale-[0.98] transition-all"
             >
               + New Quiz
             </button>
@@ -129,7 +129,7 @@ export function QuizSetManager({ data }: QuizSetManagerProps) {
             {quizzes.map((quiz) => (
               <button
                 key={quiz.quizId}
-                className="w-full flex items-center justify-between p-4 bg-[#FFFBFE] rounded-[16px] hover:bg-[#F6EDFF] active:scale-[0.99] transition-all text-left group shadow-[0_1px_2px_rgba(0,0,0,0.1)]"
+                className="w-full flex items-center justify-between p-4 bg-[#FFFBFE] rounded-[16px] hover:bg-[#F6EDFF] active:scale-[0.99] transition-all text-left group"
                 onClick={() => { setCurrentQuiz(quiz); fetchQuizDetail(quiz.quizId); }}
               >
                 <div className="flex items-center gap-3 min-w-0">
@@ -176,7 +176,7 @@ export function QuizSetManager({ data }: QuizSetManagerProps) {
         {questions.length > 0 && (
           <button
             onClick={() => handleStartQuiz(currentQuiz.quizId)}
-            className="flex items-center gap-2 h-14 px-6 bg-[#D0BCFF] text-[#381E72] text-sm font-medium rounded-[16px] hover:shadow-[0_1px_3px_1px_rgba(0,0,0,0.15)] active:scale-[0.97] transition-all shadow-[0_1px_3px_1px_rgba(0,0,0,0.15),0_1px_2px_rgba(0,0,0,0.3)]"
+            className="flex items-center gap-2 h-14 px-6 bg-[#D0BCFF] text-[#381E72] text-sm font-medium rounded-[16px] active:scale-[0.97] transition-all"
           >
             <svg className="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24">
               <path d="M8 5v14l11-7z" />
