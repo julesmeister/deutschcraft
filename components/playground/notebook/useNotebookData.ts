@@ -36,12 +36,13 @@ export function useNotebookData(props: NotebookWidgetProps) {
   const [showPageDirectory, setShowPageDirectory] = useState(false);
   const [activeCellInput, setActiveCellInput] = useState<CellAddress | null>(null);
   const [isRefreshing, setIsRefreshing] = useState(false);
+  const [refreshCounter, setRefreshCounter] = useState(0);
   const saveTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const currentPage = pages[currentPageIndex] || null;
 
-  // Yoopta editor instance — recreate per page to avoid stale Slate refs
-  const editorKey = currentPage?.pageId ?? "empty";
+  // Yoopta editor instance — recreate per page or on manual refresh
+  const editorKey = `${currentPage?.pageId ?? "empty"}-${refreshCounter}`;
   const editor = useMemo(() => createYooptaEditor(), [editorKey]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const initialEditorValue = useMemo(() => {
@@ -165,6 +166,7 @@ export function useNotebookData(props: NotebookWidgetProps) {
   const handleRefresh = async () => {
     setIsRefreshing(true);
     await Promise.all([fetchPages(), fetchEntries(), fetchCellEntries()]);
+    setRefreshCounter(c => c + 1);  // force editor to re-mount with fresh content
     setIsRefreshing(false);
   };
 
