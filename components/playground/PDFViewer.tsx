@@ -83,37 +83,35 @@ export function PDFViewer({
           )}
         </div>
         <div className="flex items-center gap-2 shrink-0">
-          {/* Page navigation controls */}
-          {currentPage != null && (
-            <div className="flex items-center gap-1">
-              {isTeacher ? (
-                <>
-                  <button
-                    onClick={handlePrev}
-                    disabled={activePage <= 1}
-                    className="p-1 rounded hover:bg-gray-100 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
-                    title="Previous page"
-                  >
-                    <ChevronLeft className="w-4 h-4 text-gray-600" />
-                  </button>
-                  <span className="text-xs font-medium text-gray-700 tabular-nums min-w-[2.5rem] text-center">
-                    p. {activePage}
-                  </span>
-                  <button
-                    onClick={handleNext}
-                    className="p-1 rounded hover:bg-gray-100 transition-colors"
-                    title="Next page"
-                  >
-                    <ChevronRight className="w-4 h-4 text-gray-600" />
-                  </button>
-                </>
-              ) : (
-                <span className="text-xs font-medium text-gray-500 tabular-nums">
+          {/* Page navigation controls — always visible */}
+          <div className="flex items-center gap-1">
+            {isTeacher ? (
+              <>
+                <button
+                  onClick={handlePrev}
+                  disabled={activePage <= 1}
+                  className="p-1 rounded hover:bg-gray-100 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                  title="Previous page"
+                >
+                  <ChevronLeft className="w-4 h-4 text-gray-600" />
+                </button>
+                <span className="text-xs font-medium text-gray-700 tabular-nums min-w-[2.5rem] text-center">
                   p. {activePage}
                 </span>
-              )}
-            </div>
-          )}
+                <button
+                  onClick={handleNext}
+                  className="p-1 rounded hover:bg-gray-100 transition-colors"
+                  title="Next page"
+                >
+                  <ChevronRight className="w-4 h-4 text-gray-600" />
+                </button>
+              </>
+            ) : (
+              <span className="text-xs font-medium text-gray-500 tabular-nums">
+                p. {activePage}
+              </span>
+            )}
+          </div>
           <a
             href={pdfUrl}
             target="_blank"

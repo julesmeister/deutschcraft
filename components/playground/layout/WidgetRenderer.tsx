@@ -5,6 +5,7 @@
 
 "use client";
 
+import { useState, useCallback, useRef } from "react";
 import { VideoPanel } from "@/components/playground/VideoPanel";
 import { ParticipantsList } from "@/components/playground/ParticipantsList";
 import { ClassroomTools } from "@/components/playground/ClassroomTools";
@@ -14,6 +15,45 @@ import { PDFViewer } from "@/components/playground/PDFViewer";
 import { AudioPlayer } from "@/components/audio/AudioPlayer";
 import { useWidgetContext } from "./PlaygroundWidgetContext";
 import type { WidgetId } from "./types";
+
+/** Resizable wrapper for the PDF viewer with a drag handle at the bottom */
+function ResizablePDFWrapper({ children }: { children: React.ReactNode }) {
+  const [height, setHeight] = useState(600);
+  const dragging = useRef(false);
+  const startY = useRef(0);
+  const startH = useRef(0);
+
+  const onPointerDown = useCallback((e: React.PointerEvent) => {
+    dragging.current = true;
+    startY.current = e.clientY;
+    startH.current = height;
+    e.currentTarget.setPointerCapture(e.pointerId);
+  }, [height]);
+
+  const onPointerMove = useCallback((e: React.PointerEvent) => {
+    if (!dragging.current) return;
+    const delta = e.clientY - startY.current;
+    setHeight(Math.max(300, Math.min(1200, startH.current + delta)));
+  }, []);
+
+  const onPointerUp = useCallback(() => {
+    dragging.current = false;
+  }, []);
+
+  return (
+    <div className="rounded-3xl overflow-hidden" style={{ height }}>
+      {children}
+      <div
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={onPointerUp}
+        className="h-3 bg-gray-200/60 hover:bg-gray-300/80 cursor-ns-resize flex items-center justify-center transition-colors -mt-3 relative z-10"
+      >
+        <div className="w-10 h-1 bg-gray-400 rounded-full" />
+      </div>
+    </div>
+  );
+}
 
 /** Check if a widget would render content (vs null) */
 export function useIsWidgetActive(widgetId: WidgetId): boolean {
@@ -98,9 +138,9 @@ export function WidgetRenderer({ widgetId }: WidgetRendererProps) {
     case "material-viewer": {
       const room = ctx.currentRoom;
       if (!room.currentMaterialUrl || !room.currentMaterialTitle) return null;
-      return (
-        <div className={room.currentMaterialType === "audio" ? "rounded-3xl overflow-hidden" : "h-[600px] rounded-3xl overflow-hidden"}>
-          {room.currentMaterialType === "audio" ? (
+      if (room.currentMaterialType === "audio") {
+        return (
+          <div className="rounded-3xl overflow-hidden">
             <AudioPlayer
               materialTitle={room.currentMaterialTitle}
               materialUrl={room.currentMaterialUrl}
@@ -108,17 +148,20 @@ export function WidgetRenderer({ widgetId }: WidgetRendererProps) {
               onClose={ctx.userRole === "teacher" ? ctx.onCloseMaterial : undefined}
               showCloseButton={ctx.userRole === "teacher"}
             />
-          ) : (
-            <PDFViewer
-              materialTitle={room.currentMaterialTitle}
-              materialUrl={room.currentMaterialUrl}
-              onClose={ctx.userRole === "teacher" ? ctx.onCloseMaterial : undefined}
-              showCloseButton={ctx.userRole === "teacher"}
-              currentPage={room.currentMaterialPage}
-              onPageChange={ctx.onSetMaterialPage}
-            />
-          )}
-        </div>
+          </div>
+        );
+      }
+      return (
+        <ResizablePDFWrapper>
+          <PDFViewer
+            materialTitle={room.currentMaterialTitle}
+            materialUrl={room.currentMaterialUrl}
+            onClose={ctx.userRole === "teacher" ? ctx.onCloseMaterial : undefined}
+            showCloseButton={ctx.userRole === "teacher"}
+            currentPage={room.currentMaterialPage}
+            onPageChange={ctx.onSetMaterialPage}
+          />
+        </ResizablePDFWrapper>
       );
     }
 
