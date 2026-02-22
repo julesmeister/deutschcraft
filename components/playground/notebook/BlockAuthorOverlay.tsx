@@ -1,7 +1,7 @@
 /**
- * BlockAuthorOverlay — shows who last edited each block in the Yoopta editor.
- * Scans the editor DOM for block elements, matches them against the blockAuthors
- * map, and renders a small name tag on blocks edited by someone other than the viewer.
+ * BlockAuthorOverlay — always-visible author indicators on blocks edited by others.
+ * Shows a colored left border + name tag on every block the current user didn't edit.
+ * Scans the editor DOM for [data-yoopta-block-id] elements and overlays markers.
  */
 
 "use client";
@@ -10,8 +10,12 @@ import { useState, useEffect, useCallback, type RefObject } from "react";
 import type { BlockAuthor } from "@/lib/models/notebook";
 
 const AUTHOR_COLORS = [
-  "#8B5CF6", "#3B82F6", "#F59E0B",
-  "#10B981", "#EF4444", "#14B8A6",
+  { bg: "#8B5CF6", light: "rgba(139,92,246,0.08)" },
+  { bg: "#3B82F6", light: "rgba(59,130,246,0.08)" },
+  { bg: "#F59E0B", light: "rgba(245,158,11,0.08)" },
+  { bg: "#10B981", light: "rgba(16,185,129,0.08)" },
+  { bg: "#EF4444", light: "rgba(239,68,68,0.08)" },
+  { bg: "#14B8A6", light: "rgba(20,184,166,0.08)" },
 ];
 
 function getAuthorColor(name: string) {
@@ -24,6 +28,8 @@ interface BlockOverlayItem {
   blockId: string;
   author: BlockAuthor;
   top: number;
+  left: number;
+  width: number;
   height: number;
 }
 
@@ -49,7 +55,6 @@ export function BlockAuthorOverlay({
     const box = container.getBoundingClientRect();
     const results: BlockOverlayItem[] = [];
 
-    // Yoopta renders blocks as [data-yoopta-block-id] elements
     const blockEls = container.querySelectorAll("[data-yoopta-block-id]");
     for (const el of blockEls) {
       const blockId = el.getAttribute("data-yoopta-block-id");
@@ -62,6 +67,8 @@ export function BlockAuthorOverlay({
         blockId,
         author,
         top: rect.top - box.top,
+        left: rect.left - box.left,
+        width: rect.width,
         height: rect.height,
       });
     }
@@ -69,10 +76,9 @@ export function BlockAuthorOverlay({
     setItems(results);
   }, [editorContainerRef, blockAuthors, currentUserId]);
 
-  // Re-scan on mount, editorKey change, blockAuthors change, and periodically
+  // Scan after render / data changes
   useEffect(() => {
-    // Initial scan after render
-    const t = setTimeout(scan, 200);
+    const t = setTimeout(scan, 300);
     return () => clearTimeout(t);
   }, [scan, editorKey]);
 
@@ -85,7 +91,7 @@ export function BlockAuthorOverlay({
     return () => container.removeEventListener("scroll", onScroll);
   }, [editorContainerRef, scan]);
 
-  // Periodic rescan for layout changes
+  // Periodic rescan for layout shifts
   useEffect(() => {
     const interval = setInterval(scan, 2000);
     return () => clearInterval(interval);
@@ -103,24 +109,27 @@ export function BlockAuthorOverlay({
             className="absolute pointer-events-none"
             style={{
               top: item.top,
-              left: -2,
+              left: item.left,
+              width: item.width,
               height: item.height,
               zIndex: 10,
             }}
           >
-            {/* Colored bar on the left edge */}
+            {/* Tinted background */}
+            <div
+              className="absolute inset-0 rounded-md"
+              style={{ backgroundColor: color.light }}
+            />
+            {/* Left border bar */}
             <div
               className="absolute left-0 top-0 bottom-0 w-[3px] rounded-full"
-              style={{ backgroundColor: color, opacity: 0.7 }}
+              style={{ backgroundColor: color.bg }}
             />
-            {/* Name tag */}
-            <div
-              className="absolute left-1.5 top-0 pointer-events-auto"
-              style={{ transform: "translateY(-50%)" }}
-            >
+            {/* Name tag pinned to top-right */}
+            <div className="absolute right-0 top-0" style={{ transform: "translateY(-50%)" }}>
               <span
-                className="text-[8px] font-bold text-white px-1 py-px rounded-sm whitespace-nowrap"
-                style={{ backgroundColor: color }}
+                className="text-[9px] font-bold text-white px-1.5 py-0.5 rounded-md whitespace-nowrap shadow-sm"
+                style={{ backgroundColor: color.bg }}
               >
                 {item.author.userName}
               </span>
