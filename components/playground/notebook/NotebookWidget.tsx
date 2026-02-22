@@ -13,7 +13,6 @@ import Toolbar, { DefaultToolbarRender } from "@yoopta/toolbar";
 import { YOOPTA_PLUGINS, YOOPTA_MARKS } from "./NotebookToolbar";
 import { NotebookExportDialog } from "./NotebookExportDialog";
 import { NotebookPageDirectory } from "./NotebookPageDirectory";
-import { StudentEntryEditor } from "./NotebookEntries";
 import { NotebookHeader } from "./NotebookHeader";
 import { NotebookCursor } from "./NotebookCursor";
 import { TableCellOverlay } from "./TableCellOverlay";
@@ -32,7 +31,7 @@ export function NotebookWidget(props: NotebookWidgetProps = {}) {
     showExportDialog, setShowExportDialog,
     showPageDirectory, setShowPageDirectory,
     handleGoToPage, handleCreatePage, handleDeletePage,
-    handleSaveTitle, handleNavigate, handleSubmitEntry,
+    handleSaveTitle, handleNavigate,
     handleReviewEntry, handleEditorChange,
     handleSubmitCellEntry, handleReviewCellEntry,
   } = nb;
@@ -201,9 +200,6 @@ export function NotebookWidget(props: NotebookWidgetProps = {}) {
               </div>
             </div>
 
-            {!isTeacher && (
-              <StudentEntryEditor onSubmit={handleSubmitEntry} />
-            )}
           </div>
         ) : (
           <div className="flex flex-col items-center justify-center h-full text-center px-6">

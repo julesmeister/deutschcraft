@@ -1,4 +1,10 @@
 import allFlashcards from "@/lib/data/vocabulary/all-flashcards.json";
+import a1Index from "@/lib/data/vocabulary/split/a1/_index.json";
+import a2Index from "@/lib/data/vocabulary/split/a2/_index.json";
+import b1Index from "@/lib/data/vocabulary/split/b1/_index.json";
+import b2Index from "@/lib/data/vocabulary/split/b2/_index.json";
+import c1Index from "@/lib/data/vocabulary/split/c1/_index.json";
+import c2Index from "@/lib/data/vocabulary/split/c2/_index.json";
 
 interface FlashcardData {
   id: string;
@@ -11,9 +17,34 @@ interface FlashcardData {
   partOfSpeech?: string;
 }
 
+interface LevelIndex {
+  level: string;
+  categories: { name: string; ids: string[] }[];
+}
+
 // In-memory map for fast lookups
 // Key: wordId (or flashcardId), Value: FlashcardData
 let vocabularyMap: Map<string, FlashcardData> | null = null;
+
+// Secondary map: split file ID → category name (e.g., "a1-adjectives-gross-big-tall" → "Adjectives")
+let splitIdCategoryMap: Map<string, { category: string; level: string }> | null = null;
+
+function initializeSplitIdMap() {
+  if (splitIdCategoryMap) return splitIdCategoryMap;
+
+  splitIdCategoryMap = new Map();
+  const indices = [a1Index, a2Index, b1Index, b2Index, c1Index, c2Index] as LevelIndex[];
+
+  for (const index of indices) {
+    for (const cat of index.categories) {
+      for (const id of cat.ids) {
+        splitIdCategoryMap.set(id, { category: cat.name, level: index.level });
+      }
+    }
+  }
+
+  return splitIdCategoryMap;
+}
 
 function initializeVocabularyMap() {
   if (vocabularyMap) return vocabularyMap;
@@ -34,12 +65,31 @@ function initializeVocabularyMap() {
 /**
  * Get vocabulary metadata by ID from static JSON files
  * Avoids database lookups for static content
+ * Supports both all-flashcards IDs (e.g., "syllabus-a1-10000")
+ * and split file IDs (e.g., "a1-adjectives-gross-big-tall")
  */
 export function getVocabularyMetadata(
   wordId: string
 ): FlashcardData | undefined {
   const map = initializeVocabularyMap();
-  return map.get(wordId);
+  const result = map.get(wordId);
+  if (result) return result;
+
+  // Fallback: try split file ID → synthesize metadata from index
+  const splitMap = initializeSplitIdMap();
+  const splitInfo = splitMap.get(wordId);
+  if (splitInfo) {
+    return {
+      id: wordId,
+      german: "",
+      english: "",
+      category: splitInfo.category,
+      level: splitInfo.level,
+      tags: [],
+    };
+  }
+
+  return undefined;
 }
 
 /**
