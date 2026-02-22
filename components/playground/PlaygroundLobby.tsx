@@ -8,7 +8,9 @@
 import Link from 'next/link';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
+import { CEFRLevelSelector } from '@/components/ui/CEFRLevelSelector';
 import { AlertDialog } from '@/components/ui/Dialog';
+import { CEFRLevel } from '@/lib/models/cefr';
 import type { PlaygroundRoom } from '@/lib/models/playground';
 
 interface PlaygroundLobbyProps {
@@ -16,6 +18,8 @@ interface PlaygroundLobbyProps {
   userId: string;
   userRole: 'teacher' | 'student';
   isCreatingRoom: boolean;
+  selectedLevel: CEFRLevel;
+  onLevelChange: (level: CEFRLevel) => void;
   dialogState: {
     isOpen: boolean;
     title: string;
@@ -31,6 +35,8 @@ export function PlaygroundLobby({
   userId,
   userRole,
   isCreatingRoom,
+  selectedLevel,
+  onLevelChange,
   dialogState,
   onCreateRoom,
   onJoinRoom,
@@ -56,14 +62,23 @@ export function PlaygroundLobby({
               </ActionButton>
             </Link>
             {userRole === 'teacher' && (
-              <ActionButton
-                onClick={onCreateRoom}
-                disabled={isCreatingRoom}
-                variant="purple"
-                icon={<ActionButtonIcons.Plus />}
-              >
-                {isCreatingRoom ? 'Creating Room...' : 'Create New Room'}
-              </ActionButton>
+              <>
+                <CEFRLevelSelector
+                  selectedLevel={selectedLevel}
+                  onLevelChange={onLevelChange}
+                  colorScheme="cool"
+                  size="sm"
+                  unavailableLevels={[CEFRLevel.C1, CEFRLevel.C2]}
+                />
+                <ActionButton
+                  onClick={onCreateRoom}
+                  disabled={isCreatingRoom}
+                  variant="purple"
+                  icon={<ActionButtonIcons.Plus />}
+                >
+                  {isCreatingRoom ? 'Creating Room...' : 'Create New Room'}
+                </ActionButton>
+              </>
             )}
           </div>
         }
@@ -91,9 +106,16 @@ export function PlaygroundLobby({
                   className="bg-white border border-gray-200 p-4 flex items-center justify-between hover:border-blue-300 transition-colors"
                 >
                   <div>
-                    <h3 className="font-semibold text-neutral-900">
-                      {room.title}
-                    </h3>
+                    <div className="flex items-center gap-2">
+                      <h3 className="font-semibold text-neutral-900">
+                        {room.title}
+                      </h3>
+                      {room.level && (
+                        <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-pastel-ocean/15 text-pastel-ocean">
+                          {room.level}
+                        </span>
+                      )}
+                    </div>
                     <p className="text-sm text-gray-600">
                       Host: {room.hostName} • {room.participantCount}{' '}
                       {room.participantCount === 1 ? 'participant' : 'participants'}

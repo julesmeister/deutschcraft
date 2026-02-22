@@ -17,7 +17,7 @@ import { useAudioController } from "@/components/playground/useAudioController";
 import { PlaygroundWidgetProvider, type WidgetContextValue } from "./layout/PlaygroundWidgetContext";
 import { ResizablePanelLayout } from "./layout/ResizablePanelLayout";
 import { usePlaygroundLayout } from "./layout/usePlaygroundLayout";
-import { setCurrentMaterialPage } from "@/lib/services/playground/rooms";
+import { setCurrentMaterialPage, setRoomVideoLayout, setCurrentNotebookPage } from "@/lib/services/playground/rooms";
 import { formatDuration } from "@/lib/utils/dateHelpers";
 import type { VideoLayout } from "@/components/playground/VideoPanel";
 import type { GroupIsolationState } from "@/components/playground/audioTypes";
@@ -115,7 +115,13 @@ export function PlaygroundRoom({
   onCloseDialog,
 }: PlaygroundRoomProps) {
   const isHost = userId === currentRoom.hostId;
-  const [videoLayout, setVideoLayout] = useState<VideoLayout>("teacher");
+  // Video layout is synced from Firestore (teacher controls)
+  const videoLayout: VideoLayout = (currentRoom.videoLayout as VideoLayout) || "teacher";
+
+  const handleSetVideoLayout = useCallback(async (layout: VideoLayout) => {
+    if (!currentRoom?.roomId) return;
+    await setRoomVideoLayout(currentRoom.roomId, layout);
+  }, [currentRoom?.roomId]);
   const [duration, setDuration] = useState<string>("00:00");
   const [formattedDate, setFormattedDate] = useState<string>("");
   const [isMaterialSelectorOpen, setIsMaterialSelectorOpen] = useState(false);
@@ -192,27 +198,33 @@ export function PlaygroundRoom({
     await setCurrentMaterialPage(currentRoom.roomId, page);
   }, [currentRoom?.roomId]);
 
+  const handleSetNotebookPage = useCallback(async (pageId: string) => {
+    if (!currentRoom?.roomId) return;
+    await setCurrentNotebookPage(currentRoom.roomId, pageId);
+  }, [currentRoom?.roomId]);
+
   // Build widget context value
   const widgetCtx: WidgetContextValue = useMemo(() => ({
     currentRoom, participants, writings, myWriting,
     userId, userName, userRole,
     isVoiceActive, isVideoActive, isMuted, localStream,
     mediaParticipants, audioStreams, videoStreams, audioAnalysers, audioControl,
-    videoLayout, onSetVideoLayout: setVideoLayout,
+    videoLayout, onSetVideoLayout: userRole === "teacher" ? handleSetVideoLayout : undefined,
     onStartVoice, onStartVideo, onStopVoice, onToggleMute, onToggleVideo,
     onSaveWriting, onToggleWritingVisibility, onToggleRoomPublicWriting,
     onCloseMaterial: onSetCurrentMaterial ? handleCloseMaterial : undefined,
     onCloseExercise: onSetCurrentExercise ? handleCloseExercise : undefined,
     onSetMaterialPage: userRole === "teacher" ? handleSetMaterialPage : undefined,
+    onSetNotebookPage: userRole === "teacher" ? handleSetNotebookPage : undefined,
     onIsolationChange: handleIsolationChange,
   }), [
     currentRoom, participants, writings, myWriting,
     userId, userName, userRole,
     isVoiceActive, isVideoActive, isMuted, localStream,
     mediaParticipants, audioStreams, videoStreams, audioAnalysers, audioControl,
-    videoLayout, onStartVoice, onStartVideo, onStopVoice, onToggleMute, onToggleVideo,
+    videoLayout, handleSetVideoLayout, onStartVoice, onStartVideo, onStopVoice, onToggleMute, onToggleVideo,
     onSaveWriting, onToggleWritingVisibility, onToggleRoomPublicWriting,
-    onSetCurrentMaterial, onSetCurrentExercise, handleSetMaterialPage, handleIsolationChange,
+    onSetCurrentMaterial, onSetCurrentExercise, handleSetMaterialPage, handleSetNotebookPage, handleIsolationChange,
   ]);
 
   return (
@@ -289,7 +301,7 @@ export function PlaygroundRoom({
           currentUserName={userName}
           isMuted={isMuted}
           isTeacher={userRole === "teacher"}
-          onExit={() => setVideoLayout("teacher")}
+          onExit={() => handleSetVideoLayout("teacher")}
         />
       )}
     </div>

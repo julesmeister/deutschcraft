@@ -13,6 +13,7 @@ import { WritingBoard } from "@/components/playground/WritingBoard";
 import { ExerciseViewer } from "@/components/playground/ExerciseViewer";
 import { PDFViewer } from "@/components/playground/PDFViewer";
 import { AudioPlayer } from "@/components/audio/AudioPlayer";
+import { NotebookWidget } from "@/components/playground/notebook/NotebookWidget";
 import { useWidgetContext } from "./PlaygroundWidgetContext";
 import type { WidgetId } from "./types";
 
@@ -47,9 +48,9 @@ function ResizablePanel({ children, initialHeight = 600 }: { children: React.Rea
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
-        className="h-3 bg-gray-200/60 hover:bg-gray-300/80 cursor-ns-resize flex items-center justify-center transition-colors -mt-3 relative z-10"
+        className="h-3 bg-transparent hover:bg-gray-300/40 cursor-ns-resize flex items-center justify-center transition-colors -mt-3 relative z-10"
       >
-        <div className="w-10 h-1 bg-gray-400 rounded-full" />
+        <div className="w-10 h-1 bg-gray-300/0 hover:bg-gray-400/60 rounded-full transition-colors" />
       </div>
     </div>
   );
@@ -63,6 +64,8 @@ export function useIsWidgetActive(widgetId: WidgetId): boolean {
       return !!(ctx.currentRoom.currentMaterialUrl && ctx.currentRoom.currentMaterialTitle);
     case "exercise-viewer":
       return !!ctx.currentRoom.currentExerciseId;
+    case "notebook":
+      return !!ctx.currentRoom.level;
     default:
       return true;
   }
@@ -97,7 +100,7 @@ export function WidgetRenderer({ widgetId }: WidgetRendererProps) {
           onStopVoice={ctx.onStopVoice}
           onToggleMute={ctx.onToggleMute}
           onToggleVideo={ctx.onToggleVideo}
-          onLayoutChange={ctx.onSetVideoLayout}
+          onLayoutChange={ctx.onSetVideoLayout || undefined}
         />
       );
 
@@ -199,6 +202,15 @@ export function WidgetRenderer({ widgetId }: WidgetRendererProps) {
           />
         </ResizablePanel>
       );
+
+    case "notebook": {
+      if (!ctx.currentRoom.level) return null;
+      return (
+        <ResizablePanel initialHeight={500}>
+          <NotebookWidget />
+        </ResizablePanel>
+      );
+    }
 
     default:
       return null;

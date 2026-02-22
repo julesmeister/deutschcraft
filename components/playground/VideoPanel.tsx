@@ -185,8 +185,8 @@ export function VideoPanel({
         )}
       </div>
 
-      {/* View Selector - Show when voice is active (camera can be off) */}
-      {isVoiceActive && (
+      {/* View Selector - Teacher only, show when voice is active */}
+      {isVoiceActive && onLayoutChange && (
         <VideoLayoutSelector
           layout={layout}
           onLayoutChange={handleLayoutChange}

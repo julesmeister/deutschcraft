@@ -49,12 +49,13 @@ export async function endAllHostRooms(hostId: string): Promise<void> {
 export async function createPlaygroundRoom(
   hostId: string,
   hostName: string,
-  title: string
+  title: string,
+  level?: string
 ): Promise<string> {
   // First, end any existing rooms hosted by this user
   await endAllHostRooms(hostId);
 
-  const roomData = {
+  const roomData: Record<string, unknown> = {
     title,
     hostId,
     hostName,
@@ -63,6 +64,7 @@ export async function createPlaygroundRoom(
     participantCount: 0,
     isPublicWriting: false,
   };
+  if (level) roomData.level = level;
 
   const docRef = await addDoc(collection(db, COLLECTIONS.ROOMS), roomData);
 
@@ -234,6 +236,14 @@ export async function setCurrentMaterialPage(
   await updateDoc(roomRef, { currentMaterialPage: page });
 }
 
+export async function setRoomVideoLayout(
+  roomId: string,
+  layout: string
+): Promise<void> {
+  const roomRef = doc(db, COLLECTIONS.ROOMS, roomId);
+  await updateDoc(roomRef, { videoLayout: layout });
+}
+
 export async function setCurrentExercise(
   roomId: string,
   exerciseId: string | null,
@@ -267,6 +277,14 @@ export async function getPlaygroundRoom(
     createdAt: (data.createdAt as Timestamp)?.toDate() || new Date(),
     endedAt: data.endedAt ? (data.endedAt as Timestamp).toDate() : undefined,
   } as PlaygroundRoom;
+}
+
+export async function setCurrentNotebookPage(
+  roomId: string,
+  pageId: string
+): Promise<void> {
+  const roomRef = doc(db, COLLECTIONS.ROOMS, roomId);
+  await updateDoc(roomRef, { currentNotebookPageId: pageId });
 }
 
 export async function getActiveRooms(): Promise<PlaygroundRoom[]> {

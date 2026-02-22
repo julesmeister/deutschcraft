@@ -658,3 +658,42 @@
 .animate-wave {
   animation: wave 1s ease-in-out infinite;
 }
+
+/* ─── Yoopta Editor — rounded floating UI overrides ─── */
+
+/* Side block action buttons (+, drag) */
+.yoopta-block-actions {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.yoopta-block-actions-plus,
+.yoopta-block-actions-drag {
+  border-radius: 8px;
+}
+
+/* Slash command dropdown */
+.yoopta-action-menu-list-content {
+  border-radius: 14px !important;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* Floating selection toolbar */
+.yoopta-toolbar-root {
+  border-radius: 14px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* Block options menu (right-click / more menu) */
+.yoopta-block-options-menu-content {
+  border-radius: 14px !important;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}

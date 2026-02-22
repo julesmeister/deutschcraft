@@ -9,7 +9,8 @@ export type WidgetId =
   | "classroom-tools"
   | "writing-board"
   | "exercise-viewer"
-  | "material-viewer";
+  | "material-viewer"
+  | "notebook";
 
 export type PanelId = "left" | "center" | "right";
 
@@ -69,6 +70,12 @@ export const WIDGET_CONFIGS: Record<WidgetId, WidgetConfig> = {
     defaultPanel: "right",
     defaultOrder: 0,
   },
+  notebook: {
+    id: "notebook",
+    label: "Notebook",
+    defaultPanel: "right",
+    defaultOrder: 1,
+  },
 };
 
 export const ALL_WIDGET_IDS: WidgetId[] = Object.keys(WIDGET_CONFIGS) as WidgetId[];
@@ -76,11 +83,11 @@ export const ALL_WIDGET_IDS: WidgetId[] = Object.keys(WIDGET_CONFIGS) as WidgetI
 export const DEFAULT_LAYOUT: LayoutState = {
   leftWidgets: ["video-panel", "participants", "classroom-tools"],
   centerWidgets: ["material-viewer", "exercise-viewer"],
-  rightWidgets: ["writing-board"],
+  rightWidgets: ["writing-board", "notebook"],
   leftPanelSize: 22,
   rightPanelSize: 30,
   isLeftPanelVisible: true,
   columnCount: 3,
 };
 
-export const STORAGE_KEY = "playground-layout-v2";
+export const STORAGE_KEY = "playground-layout-v3";

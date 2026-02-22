@@ -34,6 +34,9 @@ export function MobileMenu({ isOpen, showTeacherTab = false }: MobileMenuProps) 
               <Link href="/dashboard/student/answer-hub" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
                 Answer Hub
               </Link>
+              <Link href="/dashboard/notebook" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
+                Notebook
+              </Link>
               <Link href="/dashboard/dictionary" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
                 Dictionary
               </Link>
@@ -71,6 +74,9 @@ export function MobileMenu({ isOpen, showTeacherTab = false }: MobileMenuProps) 
               </Link>
               <Link href="/dashboard/student/answer-hub" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
                 Answer Hub
+              </Link>
+              <Link href="/dashboard/notebook" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
+                Notebook
               </Link>
               <Link href="/dashboard/dictionary" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
                 Dictionary

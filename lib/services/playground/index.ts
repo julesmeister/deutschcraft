@@ -17,6 +17,7 @@ export {
   setCurrentMaterial,
   setCurrentExercise,
   getPlaygroundRoom,
+  setCurrentNotebookPage,
   getActiveRooms,
   getRoomHistory,
 } from './rooms';

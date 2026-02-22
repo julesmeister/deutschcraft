@@ -15,6 +15,7 @@ import { usePlaygroundInitialization } from "@/lib/hooks/usePlaygroundInitializa
 import { getUserInfo } from "@/lib/utils/userHelpers";
 import { CatLoader } from "@/components/ui/CatLoader";
 import { createPlaygroundRoom } from "@/lib/services/playgroundService";
+import { CEFRLevel } from "@/lib/models/cefr";
 import type { PlaygroundRoom } from "@/lib/models/playground";
 
 function PlaygroundLobbyContent() {
@@ -31,6 +32,7 @@ function PlaygroundLobbyContent() {
     message: "",
   });
   const [isCreatingRoom, setIsCreatingRoom] = useState(false);
+  const [selectedLevel, setSelectedLevel] = useState<CEFRLevel>(CEFRLevel.B1);
 
   // Fetch current user
   const { student: currentUser, isLoading: userLoading } = useCurrentStudent(
@@ -61,7 +63,7 @@ function PlaygroundLobbyContent() {
     setIsCreatingRoom(true);
     try {
       const roomTitle = `${userName}'s Room`;
-      const roomId = await createPlaygroundRoom(userId, userName, roomTitle);
+      const roomId = await createPlaygroundRoom(userId, userName, roomTitle, selectedLevel);
       router.push(`/dashboard/playground/${roomId}`);
     } catch (error) {
       console.error("[Playground] Error creating room:", error);
@@ -112,6 +114,8 @@ function PlaygroundLobbyContent() {
         userId={userId}
         userRole={userRole}
         isCreatingRoom={isCreatingRoom}
+        selectedLevel={selectedLevel}
+        onLevelChange={setSelectedLevel}
         dialogState={dialogState}
         onCreateRoom={handleCreateRoom}
         onJoinRoom={handleJoinRoom}

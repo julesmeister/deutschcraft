@@ -43,7 +43,7 @@ export interface WidgetContextValue {
   audioAnalysers: Map<string, AnalyserNode>;
   audioControl: AudioControlState;
   videoLayout: VideoLayout;
-  onSetVideoLayout: (layout: VideoLayout) => void;
+  onSetVideoLayout?: (layout: VideoLayout) => void;
 
   // Voice/Video controls
   onStartVoice: () => Promise<void>;
@@ -61,6 +61,9 @@ export interface WidgetContextValue {
   onCloseMaterial?: () => Promise<void>;
   onCloseExercise?: () => Promise<void>;
   onSetMaterialPage?: (page: number) => Promise<void>;
+
+  // Notebook
+  onSetNotebookPage?: (pageId: string) => Promise<void>;
 
   // Isolation
   onIsolationChange: (state: GroupIsolationState) => void;
@@ -86,4 +89,9 @@ export function useWidgetContext(): WidgetContextValue {
   const ctx = useContext(PlaygroundWidgetContext);
   if (!ctx) throw new Error("useWidgetContext must be used within PlaygroundWidgetProvider");
   return ctx;
+}
+
+/** Optional variant — returns null when outside PlaygroundWidgetProvider (for standalone usage) */
+export function useOptionalWidgetContext(): WidgetContextValue | null {
+  return useContext(PlaygroundWidgetContext);
 }

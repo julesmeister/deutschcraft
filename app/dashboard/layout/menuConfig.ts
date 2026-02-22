@@ -9,6 +9,7 @@ export const studentMenuConfig = {
         { label: 'Writing', href: '/dashboard/student/writing' },
         { label: 'Audios', href: '/dashboard/student/audios' },
         { label: 'Playground', href: '/dashboard/playground' },
+        { label: 'Notebook', href: '/dashboard/notebook' },
       ],
     },
     {
@@ -51,6 +52,7 @@ export const teacherMenuConfig = {
         { label: 'Analytics', href: '/dashboard/analytics' },
         { label: 'Assignments', href: '/dashboard/assignments' },
         { label: 'Playground', href: '/dashboard/playground' },
+        { label: 'Notebook', href: '/dashboard/notebook' },
       ],
     },
     {

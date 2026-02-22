@@ -24,6 +24,9 @@ export interface PlaygroundRoom {
   currentExerciseLevel?: string; // Level (B1, A2, etc.)
   currentExerciseLessonNumber?: number; // Lesson number
   currentExerciseBookType?: 'AB' | 'KB'; // Arbeitsbuch or Kursbuch
+  videoLayout?: 'teacher' | 'gallery' | 'top-left' | 'top-right'; // Synced video layout (teacher controls)
+  level?: string; // CEFR level (A1, A2, B1, B2) — determines shared notebook
+  currentNotebookPageId?: string; // Synced notebook page (teacher controls navigation)
 }
 
 export interface PlaygroundParticipant {
