@@ -27,6 +27,8 @@ export interface PlaygroundRoom {
   videoLayout?: 'teacher' | 'gallery' | 'top-left' | 'top-right'; // Synced video layout (teacher controls)
   level?: string; // CEFR level (A1, A2, B1, B2) — determines shared notebook
   currentNotebookPageId?: string; // Synced notebook page (teacher controls navigation)
+  notebookContentUpdatedAt?: number; // Timestamp of last content save (signals other clients to refresh)
+  notebookContentUpdatedBy?: string; // userId who last saved content
 }
 
 export interface PlaygroundParticipant {

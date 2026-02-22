@@ -17,7 +17,7 @@ import { useAudioController } from "@/components/playground/useAudioController";
 import { PlaygroundWidgetProvider, type WidgetContextValue } from "./layout/PlaygroundWidgetContext";
 import { ResizablePanelLayout } from "./layout/ResizablePanelLayout";
 import { usePlaygroundLayout } from "./layout/usePlaygroundLayout";
-import { setCurrentMaterialPage, setRoomVideoLayout, setCurrentNotebookPage } from "@/lib/services/playground/rooms";
+import { setCurrentMaterialPage, setRoomVideoLayout, setCurrentNotebookPage, setNotebookContentUpdated } from "@/lib/services/playground/rooms";
 import { formatDuration } from "@/lib/utils/dateHelpers";
 import type { VideoLayout } from "@/components/playground/VideoPanel";
 import type { GroupIsolationState } from "@/components/playground/audioTypes";
@@ -203,6 +203,11 @@ export function PlaygroundRoom({
     await setCurrentNotebookPage(currentRoom.roomId, pageId);
   }, [currentRoom?.roomId]);
 
+  const handleSignalNotebookUpdate = useCallback(async () => {
+    if (!currentRoom?.roomId || !userId) return;
+    await setNotebookContentUpdated(currentRoom.roomId, userId);
+  }, [currentRoom?.roomId, userId]);
+
   // Build widget context value
   const widgetCtx: WidgetContextValue = useMemo(() => ({
     currentRoom, participants, writings, myWriting,
@@ -216,6 +221,7 @@ export function PlaygroundRoom({
     onCloseExercise: onSetCurrentExercise ? handleCloseExercise : undefined,
     onSetMaterialPage: userRole === "teacher" ? handleSetMaterialPage : undefined,
     onSetNotebookPage: userRole === "teacher" ? handleSetNotebookPage : undefined,
+    onSignalNotebookUpdate: handleSignalNotebookUpdate,
     onIsolationChange: handleIsolationChange,
   }), [
     currentRoom, participants, writings, myWriting,
@@ -224,7 +230,7 @@ export function PlaygroundRoom({
     mediaParticipants, audioStreams, videoStreams, audioAnalysers, audioControl,
     videoLayout, handleSetVideoLayout, onStartVoice, onStartVideo, onStopVoice, onToggleMute, onToggleVideo,
     onSaveWriting, onToggleWritingVisibility, onToggleRoomPublicWriting,
-    onSetCurrentMaterial, onSetCurrentExercise, handleSetMaterialPage, handleSetNotebookPage, handleIsolationChange,
+    onSetCurrentMaterial, onSetCurrentExercise, handleSetMaterialPage, handleSetNotebookPage, handleSignalNotebookUpdate, handleIsolationChange,
   ]);
 
   return (

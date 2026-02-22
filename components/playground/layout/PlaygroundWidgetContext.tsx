@@ -64,6 +64,7 @@ export interface WidgetContextValue {
 
   // Notebook
   onSetNotebookPage?: (pageId: string) => Promise<void>;
+  onSignalNotebookUpdate?: () => Promise<void>;
 
   // Isolation
   onIsolationChange: (state: GroupIsolationState) => void;

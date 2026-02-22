@@ -109,6 +109,27 @@ export function useNotebookData(props: NotebookWidgetProps) {
     if (idx >= 0 && idx !== currentPageIndex) setCurrentPageIndex(idx);
   }, [syncedPageId, pages, currentPageIndex]);
 
+  // Auto-refresh when another user updates content (Firestore signal)
+  const contentUpdatedAt = ctx?.currentRoom?.notebookContentUpdatedAt;
+  const contentUpdatedBy = ctx?.currentRoom?.notebookContentUpdatedBy;
+  const lastSeenUpdateRef = useRef<number | undefined>(undefined);
+  useEffect(() => {
+    if (!contentUpdatedAt || !contentUpdatedBy) return;
+    // Skip if this update is from the current user
+    if (contentUpdatedBy === userId) {
+      lastSeenUpdateRef.current = contentUpdatedAt;
+      return;
+    }
+    // Skip if we already processed this timestamp
+    if (lastSeenUpdateRef.current === contentUpdatedAt) return;
+    lastSeenUpdateRef.current = contentUpdatedAt;
+    // Re-fetch pages and re-mount editor with fresh content
+    (async () => {
+      await Promise.all([fetchPages(), fetchEntries(), fetchCellEntries()]);
+      setRefreshCounter(c => c + 1);
+    })();
+  }, [contentUpdatedAt, contentUpdatedBy, userId, fetchPages, fetchEntries, fetchCellEntries]);
+
   // ─── Handlers ───
   const handleGoToPage = async (index: number) => {
     setCurrentPageIndex(index);
@@ -230,8 +251,8 @@ export function useNotebookData(props: NotebookWidgetProps) {
     (value: YooptaContentValue) => {
       if (!currentPage) return;
       if (saveTimeoutRef.current) clearTimeout(saveTimeoutRef.current);
-      saveTimeoutRef.current = setTimeout(() => {
-        fetch("/api/notebook", {
+      saveTimeoutRef.current = setTimeout(async () => {
+        await fetch("/api/notebook", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -242,9 +263,13 @@ export function useNotebookData(props: NotebookWidgetProps) {
             userName,
           }),
         });
+        // Signal via Firestore that content was updated
+        if (ctx?.onSignalNotebookUpdate) {
+          ctx.onSignalNotebookUpdate();
+        }
       }, 1000);
     },
-    [currentPage, userId, userName]
+    [currentPage, userId, userName, ctx]
   );
 
   // Visible entries (teacher sees all, student sees approved + own)

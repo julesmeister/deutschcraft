@@ -287,6 +287,17 @@ export async function setCurrentNotebookPage(
   await updateDoc(roomRef, { currentNotebookPageId: pageId });
 }
 
+export async function setNotebookContentUpdated(
+  roomId: string,
+  userId: string
+): Promise<void> {
+  const roomRef = doc(db, COLLECTIONS.ROOMS, roomId);
+  await updateDoc(roomRef, {
+    notebookContentUpdatedAt: Date.now(),
+    notebookContentUpdatedBy: userId,
+  });
+}
+
 export async function getActiveRooms(): Promise<PlaygroundRoom[]> {
   const q = query(
     collection(db, COLLECTIONS.ROOMS),
