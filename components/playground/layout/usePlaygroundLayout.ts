@@ -32,9 +32,14 @@ function validateLayout(stored: LayoutState): LayoutState {
   if (!stored.columnCount) {
     stored = { ...stored, columnCount: 3 };
   }
+  // Ensure hiddenWidgets exists (migration)
+  if (!stored.hiddenWidgets) {
+    stored = { ...stored, hiddenWidgets: [] };
+  }
 
   const allInLayout = [...stored.leftWidgets, ...stored.centerWidgets, ...stored.rightWidgets];
-  const missing = ALL_WIDGET_IDS.filter((id) => !allInLayout.includes(id));
+  const hidden = stored.hiddenWidgets.filter((id) => ALL_WIDGET_IDS.includes(id));
+  const missing = ALL_WIDGET_IDS.filter((id) => !allInLayout.includes(id) && !hidden.includes(id));
   const invalid = allInLayout.filter((id) => !ALL_WIDGET_IDS.includes(id as WidgetId));
 
   if (missing.length > 0 || invalid.length > 0) {
@@ -47,7 +52,7 @@ function validateLayout(stored: LayoutState): LayoutState {
       else if (def.centerWidgets.includes(id)) center.push(id);
       else right.push(id);
     }
-    return { ...stored, leftWidgets: left, centerWidgets: center, rightWidgets: right };
+    return { ...stored, leftWidgets: left, centerWidgets: center, rightWidgets: right, hiddenWidgets: hidden };
   }
   return stored;
 }
@@ -156,19 +161,24 @@ export function usePlaygroundLayout() {
       const isVisible = allInLayout.includes(widgetId);
 
       if (isVisible) {
-        // Remove from whichever panel it's in
+        // Remove from whichever panel it's in and mark as hidden
         return {
           ...prev,
           leftWidgets: prev.leftWidgets.filter((id) => id !== widgetId),
           centerWidgets: prev.centerWidgets.filter((id) => id !== widgetId),
           rightWidgets: prev.rightWidgets.filter((id) => id !== widgetId),
+          hiddenWidgets: [...prev.hiddenWidgets.filter((id) => id !== widgetId), widgetId],
         };
       }
 
-      // Add back to its default panel
+      // Add back to its default panel and remove from hidden
       const config = WIDGET_CONFIGS[widgetId];
       const panelKey = PANEL_KEYS[config.defaultPanel];
-      return { ...prev, [panelKey]: [...prev[panelKey], widgetId] };
+      return {
+        ...prev,
+        [panelKey]: [...prev[panelKey], widgetId],
+        hiddenWidgets: prev.hiddenWidgets.filter((id) => id !== widgetId),
+      };
     });
   }, []);
 

@@ -21,6 +21,7 @@ export interface LayoutState {
   leftWidgets: WidgetId[];
   centerWidgets: WidgetId[];
   rightWidgets: WidgetId[];
+  hiddenWidgets: WidgetId[];
   leftPanelSize: number;
   rightPanelSize: number;
   isLeftPanelVisible: boolean;
@@ -91,6 +92,7 @@ export const DEFAULT_LAYOUT: LayoutState = {
   leftWidgets: ["video-panel", "participants", "classroom-tools"],
   centerWidgets: ["material-viewer", "exercise-viewer", "quiz"],
   rightWidgets: ["writing-board", "notebook"],
+  hiddenWidgets: [],
   leftPanelSize: 22,
   rightPanelSize: 30,
   isLeftPanelVisible: true,
