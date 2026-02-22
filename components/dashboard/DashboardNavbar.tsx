@@ -61,16 +61,14 @@ export function DashboardNavbar() {
   return (
     <header className="pt-3 lg:pt-3 relative z-[100]">
       <div className="container mx-auto px-4 sm:px-6 relative z-[100]">
-        <div data-navbar className={`w-full flex items-center justify-between transition-all duration-500 ease-out bg-white/95 backdrop-blur-md border rounded-2xl py-2.5 px-4 lg:py-3 lg:px-8
-          ${isScrolled
-            ? 'border-gray-200/60 shadow-lg'
-            : 'border-transparent shadow-none'
+        <div data-navbar className={`w-full flex items-center justify-between transition-all duration-500 ease-out liquid-glass relative rounded-2xl py-2.5 px-4 lg:py-3 lg:px-8
+          ${isScrolled ? 'liquid-glass-scrolled' : ''
           }`}>
-          <NavbarLogo />
+          <div className="relative z-[2]"><NavbarLogo /></div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center flex-1 justify-end gap-8 z-[100]">
-            <div className="h-4 w-px bg-gray-200/80"></div>
+          <div className="hidden lg:flex items-center flex-1 justify-end gap-8 relative z-[2]">
+            <div className="h-4 w-px bg-gray-300/40"></div>
 
             <nav className="flex items-center space-x-10">
               <Link
@@ -115,7 +113,7 @@ export function DashboardNavbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg transition-colors hover:bg-gray-100 active:bg-gray-200"
+            className="lg:hidden p-2 rounded-lg transition-colors hover:bg-white/40 active:bg-white/60 relative z-[2]"
             aria-label="Toggle menu"
           >
             <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
