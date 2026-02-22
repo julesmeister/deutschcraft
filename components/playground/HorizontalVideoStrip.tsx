@@ -109,13 +109,13 @@ export function HorizontalVideoStrip({
   }, [videoStreams]);
 
   return (
-    <div className="bg-white border border-gray-200 p-2 sm:p-3">
+    <div className="bg-white rounded-3xl p-2 sm:p-3">
       <div className="flex items-center gap-1 sm:gap-2">
         {/* Previous Button */}
         {totalPages > 1 && (
           <button
             onClick={handlePrevPage}
-            className="flex-shrink-0 w-6 sm:w-8 h-20 sm:h-28 flex items-center justify-center bg-gray-100 hover:bg-gray-200 rounded transition-colors"
+            className="flex-shrink-0 w-6 sm:w-8 h-20 sm:h-28 flex items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-xl transition-colors"
             aria-label="Previous page"
           >
             <svg className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -131,7 +131,7 @@ export function HorizontalVideoStrip({
             const hasVideo = isLocal ? isVideoActive : videoStreams.has(participant.userId);
 
             return (
-              <div key={participant.userId} className="relative flex-shrink-0 w-32 sm:w-36 md:w-40 h-20 sm:h-24 md:h-28 bg-gray-900 rounded overflow-hidden">
+              <div key={participant.userId} className="relative flex-shrink-0 w-32 sm:w-36 md:w-40 h-20 sm:h-24 md:h-28 bg-gray-900 rounded-xl overflow-hidden">
                 {hasVideo ? (
                   <video
                     ref={(el) => {
@@ -171,7 +171,7 @@ export function HorizontalVideoStrip({
 
           {/* Placeholder camera views when no other participants - fill remaining slots */}
           {Array.from({ length: placeholdersCount }).map((_, idx) => (
-            <div key={`placeholder-${idx}`} className="relative flex-shrink-0 w-32 sm:w-36 md:w-40 h-20 sm:h-24 md:h-28 bg-gray-900 rounded overflow-hidden border-2 border-dashed border-gray-700">
+            <div key={`placeholder-${idx}`} className="relative flex-shrink-0 w-32 sm:w-36 md:w-40 h-20 sm:h-24 md:h-28 bg-gray-900 rounded-xl overflow-hidden border-2 border-dashed border-gray-700">
               <div className="w-full h-full flex items-center justify-center bg-gray-800/50">
                 <div className="text-center text-gray-500">
                   <svg className="w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-1 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -188,7 +188,7 @@ export function HorizontalVideoStrip({
         {totalPages > 1 && (
           <button
             onClick={handleNextPage}
-            className="flex-shrink-0 w-6 sm:w-8 h-20 sm:h-28 flex items-center justify-center bg-gray-100 hover:bg-gray-200 rounded transition-colors"
+            className="flex-shrink-0 w-6 sm:w-8 h-20 sm:h-28 flex items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-xl transition-colors"
             aria-label="Next page"
           >
             <svg className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">

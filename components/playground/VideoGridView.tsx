@@ -147,7 +147,7 @@ export function VideoGridView({
       <div className={`grid ${getGridCols()} gap-2 sm:gap-3 md:gap-4`}>
         {/* Local Video - shown if host in teacher mode, or always in grid mode */}
         {showLocalVideo && (
-          <div className="relative aspect-video bg-gray-900 rounded-lg overflow-hidden">
+          <div className="relative aspect-video bg-gray-900 rounded-2xl overflow-hidden">
             {isVideoActive ? (
               <video
                 ref={localVideoRef}
@@ -214,7 +214,7 @@ export function VideoGridView({
           return (
             <div
               key={participant.userId}
-              className="relative aspect-video bg-gray-900 rounded-lg overflow-hidden"
+              className="relative aspect-video bg-gray-900 rounded-2xl overflow-hidden"
             >
               {/* Always render video element for audio+video playback */}
               {(hasVideo || hasAudio) && (
