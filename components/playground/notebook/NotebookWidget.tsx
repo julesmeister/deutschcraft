@@ -31,7 +31,7 @@ export function NotebookWidget(props: NotebookWidgetProps = {}) {
     showPageDirectory, setShowPageDirectory,
     handleGoToPage, handleCreatePage, handleDeletePage,
     handleSaveTitle, handleNavigate, handleRefresh, isRefreshing,
-    handleReviewEntry, handleEditorChange,
+    handleReviewEntry, handleReviewBlock, handleEditorChange,
     handleSubmitCellEntry, handleReviewCellEntry,
   } = nb;
 
@@ -149,6 +149,7 @@ export function NotebookWidget(props: NotebookWidgetProps = {}) {
                   blockAuthors={blockAuthors}
                   currentUserId={userId}
                   isTeacher={isTeacher}
+                  onReviewBlock={handleReviewBlock}
                 />
 
                 <TableCellOverlay

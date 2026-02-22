@@ -128,6 +128,28 @@ export async function updateNotebookPageContent(
   }
 }
 
+export async function updateBlockAuthors(
+  pageId: string,
+  blockAuthors: Record<string, any>,
+  content?: object
+): Promise<void> {
+  try {
+    if (content) {
+      await db.execute({
+        sql: 'UPDATE notebook_pages SET block_authors = ?, content = ? WHERE page_id = ?',
+        args: [JSON.stringify(blockAuthors), JSON.stringify(content), pageId],
+      });
+    } else {
+      await db.execute({
+        sql: 'UPDATE notebook_pages SET block_authors = ? WHERE page_id = ?',
+        args: [JSON.stringify(blockAuthors), pageId],
+      });
+    }
+  } catch (error) {
+    console.error('[notebookService] updateBlockAuthors error:', error);
+  }
+}
+
 export async function updateNotebookPageTitle(
   pageId: string,
   title: string

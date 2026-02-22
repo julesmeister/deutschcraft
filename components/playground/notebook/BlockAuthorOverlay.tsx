@@ -2,7 +2,7 @@
  * BlockAuthorOverlay — cursor-style author indicators at the end of blocks
  * edited by someone other than the current user. Uses the same visual style
  * as NotebookCursor: colored vertical caret + name tag above it.
- * For teachers, shows approve (keep) / reject (undo) buttons.
+ * For teachers, shows approve (accept edit) / reject (dismiss) buttons.
  */
 
 "use client";
@@ -35,7 +35,7 @@ interface BlockAuthorOverlayProps {
   blockAuthors: Record<string, BlockAuthor>;
   currentUserId: string;
   isTeacher: boolean;
-  onRevertBlock?: (blockId: string) => void;
+  onReviewBlock?: (blockId: string, action: "approve" | "reject") => void;
 }
 
 export function BlockAuthorOverlay({
@@ -44,7 +44,7 @@ export function BlockAuthorOverlay({
   blockAuthors,
   currentUserId,
   isTeacher,
-  onRevertBlock,
+  onReviewBlock,
 }: BlockAuthorOverlayProps) {
   const [cursors, setCursors] = useState<CursorItem[]>([]);
 
@@ -62,7 +62,7 @@ export function BlockAuthorOverlay({
       const author = blockAuthors[blockId];
       if (!author || author.userId === currentUserId) continue;
 
-      // Find the end of text content in this block
+      // Find the end of text content — skip blocks with no visible text
       const pos = getEndOfBlockPosition(el as HTMLElement, box);
       if (!pos) continue;
 
@@ -103,6 +103,7 @@ export function BlockAuthorOverlay({
       {cursors.map((item) => {
         const color = getColor(item.author.userName);
         const flipLeft = item.x > item.containerWidth * 0.55;
+        const showButtons = isTeacher && onReviewBlock;
 
         return (
           <div
@@ -110,7 +111,7 @@ export function BlockAuthorOverlay({
             className="absolute"
             style={{ left: item.x, top: item.y, zIndex: 20 }}
           >
-            {/* Name label + optional approve/reject — above the caret */}
+            {/* Name label + approve/reject — above the caret */}
             <div
               className={`absolute flex items-stretch gap-px pointer-events-auto whitespace-nowrap ${
                 flipLeft ? "right-0 flex-row-reverse" : "left-0"
@@ -120,26 +121,38 @@ export function BlockAuthorOverlay({
               <span
                 className={`text-[9px] font-bold text-white px-1.5 py-px flex items-center ${
                   flipLeft
-                    ? (isTeacher && onRevertBlock ? "" : "rounded-tl-md") + " rounded-tr-md"
-                    : "rounded-tl-md" + (isTeacher && onRevertBlock ? "" : " rounded-tr-md")
+                    ? (showButtons ? "" : "rounded-tl-md") + " rounded-tr-md"
+                    : "rounded-tl-md" + (showButtons ? "" : " rounded-tr-md")
                 }`}
                 style={{ backgroundColor: color }}
               >
                 {item.author.userName}
               </span>
-              {isTeacher && onRevertBlock && (
-                <button
-                  onClick={() => onRevertBlock(item.blockId)}
-                  className={`px-1.5 flex items-center justify-center active:scale-90 ${
-                    flipLeft ? "rounded-tl-md" : "rounded-tr-md"
-                  }`}
-                  style={{ backgroundColor: "#EF4444" }}
-                  title="Undo this edit"
-                >
-                  <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
+              {showButtons && (
+                <>
+                  <button
+                    onClick={() => onReviewBlock(item.blockId, "approve")}
+                    className="px-1.5 flex items-center justify-center active:scale-90"
+                    style={{ backgroundColor: "#22C55E" }}
+                    title="Approve"
+                  >
+                    <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </button>
+                  <button
+                    onClick={() => onReviewBlock(item.blockId, "reject")}
+                    className={`px-1.5 flex items-center justify-center active:scale-90 ${
+                      flipLeft ? "rounded-tl-md" : "rounded-tr-md"
+                    }`}
+                    style={{ backgroundColor: "#EF4444" }}
+                    title="Reject"
+                  >
+                    <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </>
               )}
             </div>
             {/* Caret line */}
@@ -152,14 +165,14 @@ export function BlockAuthorOverlay({
 }
 
 /**
- * Find the position at the end of the last text node inside a block element,
- * relative to the container. This places the cursor right after the last character.
+ * Find the position at the end of the last text node inside a block element.
+ * Returns null if the block has no visible text (empty lines, dividers, etc.)
  */
 function getEndOfBlockPosition(
   blockEl: HTMLElement,
   containerBox: DOMRect
 ): { x: number; y: number } | null {
-  // Walk backwards to find the last text node with content
+  // Walk to find the last text node with actual content
   const walker = document.createTreeWalker(blockEl, NodeFilter.SHOW_TEXT);
   let lastTextNode: Text | null = null;
   let node: Text | null;
@@ -169,28 +182,24 @@ function getEndOfBlockPosition(
     }
   }
 
-  if (lastTextNode) {
-    try {
-      const range = document.createRange();
-      range.setStart(lastTextNode, lastTextNode.length);
-      range.collapse(true);
-      const rects = range.getClientRects();
-      if (rects.length > 0) {
-        const rect = rects[0];
-        return {
-          x: rect.left - containerBox.left,
-          y: rect.top - containerBox.top,
-        };
-      }
-    } catch {
-      // fallback below
+  // No visible text → skip this block entirely (empty line, line break, divider)
+  if (!lastTextNode) return null;
+
+  try {
+    const range = document.createRange();
+    range.setStart(lastTextNode, lastTextNode.length);
+    range.collapse(true);
+    const rects = range.getClientRects();
+    if (rects.length > 0) {
+      const rect = rects[0];
+      return {
+        x: rect.left - containerBox.left,
+        y: rect.top - containerBox.top,
+      };
     }
+  } catch {
+    // fall through
   }
 
-  // Fallback: use the block element's right edge
-  const blockRect = blockEl.getBoundingClientRect();
-  return {
-    x: blockRect.right - containerBox.left - 4,
-    y: blockRect.top - containerBox.top + 4,
-  };
+  return null;
 }

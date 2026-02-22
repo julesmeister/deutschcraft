@@ -259,6 +259,41 @@ export function useNotebookData(props: NotebookWidgetProps) {
   // Block authorship for the current page
   const blockAuthors = currentPage?.blockAuthors ?? {};
 
+  // Approve or reject a student's block edit (clears the author tag)
+  const handleReviewBlock = async (blockId: string, action: "approve" | "reject") => {
+    if (!currentPage) return;
+    // Remove the block from local blockAuthors immediately
+    const updated = { ...blockAuthors };
+    delete updated[blockId];
+
+    // If rejecting, also delete the block content from the editor
+    if (action === "reject") {
+      try {
+        editor.deleteBlock({ blockId });
+      } catch {
+        // block may already be gone
+      }
+    }
+
+    // Save updated content + cleared author to DB
+    const content = action === "reject"
+      ? editor.getEditorValue()
+      : currentPage.content;
+
+    await fetch("/api/notebook", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        action: "updateBlockAuthors",
+        pageId: currentPage.pageId,
+        blockAuthors: updated,
+        ...(action === "reject" ? { content } : {}),
+      }),
+    });
+    await fetchPages();
+    if (action === "reject") setRefreshCounter(c => c + 1);
+  };
+
   return {
     // Identity
     userId, userName, userRole, isTeacher, level,
@@ -278,6 +313,6 @@ export function useNotebookData(props: NotebookWidgetProps) {
     handleGoToPage, handleCreatePage, handleDeletePage,
     handleSaveTitle, handleNavigate, handleRefresh, isRefreshing,
     handleSubmitEntry, handleReviewEntry, handleEditorChange,
-    handleSubmitCellEntry, handleReviewCellEntry,
+    handleReviewBlock, handleSubmitCellEntry, handleReviewCellEntry,
   };
 }

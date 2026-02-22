@@ -17,6 +17,7 @@ import {
   updateEntryStatus,
   deleteNotebookEntry,
   getEntryStatsByLevel,
+  updateBlockAuthors,
 } from '@/lib/services/turso/notebookService';
 import {
   createCellEntry,
@@ -69,6 +70,13 @@ export async function POST(req: NextRequest) {
         const { pageId, content, userId, userName } = body;
         if (!pageId) return NextResponse.json({ error: 'pageId required' }, { status: 400 });
         await updateNotebookPageContent(pageId, content, userId, userName);
+        return NextResponse.json({ success: true });
+      }
+
+      case 'updateBlockAuthors': {
+        const { pageId, blockAuthors, content } = body;
+        if (!pageId) return NextResponse.json({ error: 'pageId required' }, { status: 400 });
+        await updateBlockAuthors(pageId, blockAuthors, content);
         return NextResponse.json({ success: true });
       }
 
