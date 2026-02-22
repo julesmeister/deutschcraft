@@ -221,7 +221,6 @@ export function useNotebookData(props: NotebookWidgetProps) {
     (value: YooptaContentValue, updateCaret: () => void) => {
       if (!currentPage) return;
       requestAnimationFrame(updateCaret);
-      if (!isTeacher) return;
       if (saveTimeoutRef.current) clearTimeout(saveTimeoutRef.current);
       saveTimeoutRef.current = setTimeout(() => {
         fetch("/api/notebook", {
@@ -231,7 +230,7 @@ export function useNotebookData(props: NotebookWidgetProps) {
         });
       }, 1000);
     },
-    [isTeacher, currentPage]
+    [currentPage]
   );
 
   // Visible entries (teacher sees all, student sees approved + own)

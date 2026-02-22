@@ -165,11 +165,10 @@ export function NotebookWidget(props: NotebookWidgetProps = {}) {
                   plugins={YOOPTA_PLUGINS}
                   marks={YOOPTA_MARKS}
                   value={initialEditorValue}
-                  tools={isTeacher ? TOOLS : undefined}
-                  readOnly={!isTeacher}
+                  tools={TOOLS}
                   onChange={onEditorChange}
-                  autoFocus={isTeacher}
-                  placeholder={isTeacher ? "Type '/' for commands..." : undefined}
+                  autoFocus
+                  placeholder="Type '/' for commands..."
                   style={{ width: "100%" }}
                 />
 
