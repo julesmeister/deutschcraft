@@ -75,6 +75,27 @@ export class SignalingRoom implements DurableObject {
 
     // Get all existing peers
     const allSockets = this.ctx.getWebSockets();
+
+    // Check for stale sockets with the same peerId (reconnection scenario).
+    // If found, clean them up and tell other peers to remove the stale connection
+    // before re-adding, so they don't hold onto dead RTCPeerConnections.
+    for (const stale of allSockets) {
+      if (stale === ws) continue;
+      const a = stale.deserializeAttachment() as PeerAttachment | null;
+      if (a?.peerId === peerId) {
+        console.log(`[DO] rejoin detected for ${peerId} — cleaning up stale socket`);
+        stale.serializeAttachment(null);
+        // Notify all other peers to drop their old connection to this peerId
+        for (const other of allSockets) {
+          if (other === ws || other === stale) continue;
+          const oa = other.deserializeAttachment() as PeerAttachment | null;
+          if (!oa) continue;
+          this.send(other, { type: 'removePeer', peerId });
+        }
+        try { stale.close(1000, 'replaced by reconnect'); } catch { /* already closed */ }
+      }
+    }
+
     const joinedPeers = allSockets.filter(s => {
       if (s === ws) return false;
       const a = s.deserializeAttachment() as PeerAttachment | null;

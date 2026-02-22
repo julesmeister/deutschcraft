@@ -19,6 +19,7 @@ interface FloatingPlaygroundControlsProps {
   onResetLayout: () => void;
   onOpenExerciseSelector?: () => void;
   onOpenMaterialSelector?: () => void;
+  onReconnectAudio?: () => void;
   onMinimize?: () => void;
   onEndRoom: () => Promise<void>;
 }
@@ -41,6 +42,7 @@ export function FloatingPlaygroundControls({
   onResetLayout,
   onOpenExerciseSelector,
   onOpenMaterialSelector,
+  onReconnectAudio,
   onMinimize,
   onEndRoom,
 }: FloatingPlaygroundControlsProps) {
@@ -116,6 +118,20 @@ export function FloatingPlaygroundControls({
       </svg>
     ),
   });
+
+  if (onReconnectAudio) {
+    actions.push({
+      key: "reconnect",
+      label: "Reconnect",
+      onClick: onReconnectAudio,
+      className: "bg-emerald-50 text-emerald-700 hover:bg-emerald-100",
+      icon: (
+        <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+        </svg>
+      ),
+    });
+  }
 
   if (userRole === "teacher" && onOpenExerciseSelector) {
     actions.push({

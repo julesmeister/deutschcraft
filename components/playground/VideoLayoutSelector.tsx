@@ -5,7 +5,7 @@
 
 'use client';
 
-export type VideoLayout = 'teacher' | 'top-left' | 'top-right';
+export type VideoLayout = 'teacher' | 'gallery' | 'top-left' | 'top-right';
 
 interface VideoLayoutSelectorProps {
   layout: VideoLayout;
@@ -32,6 +32,22 @@ export function VideoLayoutSelector({ layout, onLayoutChange }: VideoLayoutSelec
           `}
         >
           Teacher
+        </button>
+        <button
+          onClick={() => onLayoutChange('gallery')}
+          className={`
+            flex-1 px-2 py-1.5 sm:px-2.5 sm:py-1.5 transition-all duration-200
+            rounded-full
+            text-xs sm:text-sm font-bold
+            ${
+              layout === 'gallery'
+                ? 'bg-slate-700 text-white shadow-sm'
+                : 'text-slate-600 hover:bg-slate-100'
+            }
+            active:scale-95
+          `}
+        >
+          Gallery
         </button>
         <button
           onClick={() => onLayoutChange('top-left')}

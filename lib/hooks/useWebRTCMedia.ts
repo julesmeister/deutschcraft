@@ -144,7 +144,16 @@ export function useWebRTCMedia({
   // Signaling event handlers
   const handleAddPeer = useCallback(async (peerId: string, peerName: string, shouldCreateOffer: boolean) => {
     console.log('[MEDIA] addPeer', peerId, peerName, 'offer:', shouldCreateOffer);
-    if (peerConnectionsRef.current.has(peerId)) return;
+
+    // If a connection already exists (e.g. peer reconnected after refresh),
+    // clean it up first so we can establish a fresh connection
+    if (peerConnectionsRef.current.has(peerId)) {
+      console.log('[MEDIA] cleaning up stale connection for', peerId);
+      const stalePeer = peerConnectionsRef.current.get(peerId)!;
+      cleanupPeerConnection(stalePeer);
+      peerConnectionsRef.current.delete(peerId);
+      removePeerFromState(peerId);
+    }
 
     // Add to participants
     setParticipants(prev => {

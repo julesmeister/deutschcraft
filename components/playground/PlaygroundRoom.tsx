@@ -12,6 +12,7 @@ import { FloatingRedemittelWidget } from "@/components/writing/FloatingRedemitte
 import { MaterialSelector } from "@/components/playground/MaterialSelector";
 import { ExerciseSelector } from "@/components/playground/ExerciseSelector";
 import { FloatingPlaygroundControls } from "@/components/playground/FloatingPlaygroundControls";
+import { VideoGalleryOverlay } from "@/components/playground/VideoGalleryOverlay";
 import { useAudioController } from "@/components/playground/useAudioController";
 import { PlaygroundWidgetProvider, type WidgetContextValue } from "./layout/PlaygroundWidgetContext";
 import { ResizablePanelLayout } from "./layout/ResizablePanelLayout";
@@ -178,6 +179,14 @@ export function PlaygroundRoom({
     if (onSetCurrentExercise) await onSetCurrentExercise(null, null, null, null, null);
   };
 
+  const handleReconnectAudio = useCallback(async () => {
+    if (!isVoiceActive) return;
+    await onStopVoice();
+    // Brief delay to let cleanup complete before rejoining
+    await new Promise(r => setTimeout(r, 500));
+    await onStartVoice();
+  }, [isVoiceActive, onStopVoice, onStartVoice]);
+
   const handleSetMaterialPage = useCallback(async (page: number) => {
     if (!currentRoom?.roomId) return;
     await setCurrentMaterialPage(currentRoom.roomId, page);
@@ -244,6 +253,7 @@ export function PlaygroundRoom({
         onResetLayout={resetLayout}
         onOpenExerciseSelector={onSetCurrentExercise ? () => setIsExerciseSelectorOpen(true) : undefined}
         onOpenMaterialSelector={onSetCurrentMaterial ? () => setIsMaterialSelectorOpen(true) : undefined}
+        onReconnectAudio={isVoiceActive ? handleReconnectAudio : undefined}
         onMinimize={onMinimize}
         onEndRoom={onEndRoom}
       />
@@ -265,6 +275,21 @@ export function PlaygroundRoom({
           onClose={() => setIsExerciseSelectorOpen(false)}
           onSelectExercise={handleSelectExercise}
           currentExerciseId={currentRoom.currentExerciseId}
+        />
+      )}
+
+      {videoLayout === "gallery" && isVoiceActive && (
+        <VideoGalleryOverlay
+          isVideoActive={isVideoActive}
+          localStream={localStream}
+          participants={mediaParticipants}
+          videoStreams={videoStreams}
+          audioStreams={audioStreams}
+          currentUserId={userId}
+          currentUserName={userName}
+          isMuted={isMuted}
+          isTeacher={userRole === "teacher"}
+          onExit={() => setVideoLayout("teacher")}
         />
       )}
     </div>

@@ -193,6 +193,13 @@ export function VideoPanel({
         />
       )}
 
+      {/* Gallery mode indicator */}
+      {isVoiceActive && layout === "gallery" && (
+        <div className="text-center py-4 text-sm text-gray-500">
+          Gallery mode active — fullscreen view is open
+        </div>
+      )}
+
       {/* Video Grid - Show remote streams when voice is active regardless of local camera */}
       {isVoiceActive && layout === "teacher" && (
         <VideoGridView
